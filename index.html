@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Tech Roadmaps: Your Path to Mastery</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="name">TechRoadmaps.</a>
+        <ul>
+            <li><a class="active" href="#Home" data-i18n="nav_home">Home</a></li>
+            <li><a href="#domains" data-i18n="nav_domains">To Learn</a></li>
+            <li><a href="#Aboutme" data-i18n="nav_about">About me</a></li>
+            <li><a href="#Contactme" data-i18n="nav_contact">Contact me</a></li>
+            <li id="auth-section">
+                <a href="#" class="login-btn" data-i18n="login">Login</a>
+            </li>
+
+            <!-- Language Dropdown -->
+            <li class="language-dropdown" aria-label="language-selector">
+                <a href="#" class="lang-toggle" title="Language"><i class='bx bx-globe'></i></a>
+                <ul class="language-list" aria-hidden="true">
+                    <li data-lang="en">English</li>
+                    <li data-lang="fr">Français</li>
+                    <li data-lang="ar">العربية</li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+    <section class="home" id="Home">
+        <div class="home-info">
+            <!-- Add a welcome message placeholder -->
+            <h1 id="welcome-message" class="first" data-i18n="welcome">Find Your Path.</h1>
+            <h1 class="second">Master Your
+                <span style="--i:3;" data-text="Future" data-i18n="Future">Future.</span>
+                <span style="--i:2;" data-text="Domain" data-i18n="Domain">Domain.</span>
+                <span style="--i:1;" data-text="Learning" data-i18n="Learning">Learning.</span>
+            </h1>
+            <h2 data-i18n="tagline">Personalized learning roadmaps for every tech domain.</h2>
+            <p data-i18n="intro_paragraph">Learning something new can feel overwhelming when you don’t know where to
+                start.
+                That’s why we’ve built a platform that gives you a clear,
+                structured roadmap for any field you choose — from web development and data science to UI design and
+                cybersecurity.
+                Each roadmap is carefully designed to guide you step by step, with curated resources, projects, and
+                checkpoints to track your progress.
+                No more confusion, no more endless searching — just a clear direction toward the skills and career you
+                want.</p>
+            <div class="btn">
+                <a href="#domains" class="btn-primary" data-i18n="start">Start Learning</a>
+                <a href="#registre" class="btn-secondary" data-i18n="register">Register Now<i
+                        class='bxr  bxs-user-plus'></i> </a>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="Images\Images\programming-background-collage.jpg" alt="homeimage">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="domains" class="domains">
+        <h2 data-i18n="choose_domain">Choose Your Domain</h2>
+        <div class="domains-container">
+            <a href="frontend-development.html" class="domain-card">
+                <i class='bx bx-layout'></i>
+                <h3 data-i18n="frontend">Frontend Development</h3>
+                <p data-i18n="frontend_desc">Craft beautiful and interactive user interfaces for the web.</p>
+            </a>
+            <a href="backend-development.html" class="domain-card">
+                <i class='bx bx-server'></i>
+                <h3 data-i18n="backend">Backend Development</h3>
+                <p data-i18n="backend_desc">Build the server-side logic and APIs that power applications.</p>
+            </a>
+            <a href="programming.html" class="domain-card">
+                <i class='bx bx-terminal'></i>
+                <h3 data-i18n="programming">Programming</h3>
+                <p data-i18n="programming_desc">Master foundational concepts in languages like Python, Java, and C++.
+                </p>
+            </a>
+            <a href="cybersecurity.html" class="domain-card">
+                <i class='bx bx-shield-quarter'></i>
+                <h3 data-i18n="cybersecurity">Cybersecurity</h3>
+                <p data-i18n="cybersecurity_desc">Protect systems, networks, and data from digital threats.</p>
+            </a>
+            <a href="database.html" class="domain-card">
+                <i class='bxr  bxs-database-alt' style='color:#7cf03d'></i>
+                <h3 data-i18n="database">Database</h3>
+                <p data-i18n="database_desc">Design, manage, and query complex data systems.</p>
+            </a>
+            <a href="data-science.html" class="domain-card">
+                <i class='bxr  bxs-science' style='color:#7cf03d'></i>
+                <h3 data-i18n="datascience">Data Science</h3>
+                <p data-i18n="datascience_desc">Analyze and visualize data to extract meaningful insights.</p>
+            </a>
+            <a href="machine-learning.html" class="domain-card">
+                <i class='bx bx-brain'></i>
+                <h3 data-i18n="machinelearning">Machine Learning</h3>
+                <p data-i18n="machinelearning_desc">Create intelligent systems that learn from data to make predictions.
+                </p>
+            </a>
+        </div>
+    </section>
+    <section class="about-contact">
+        <div id="Aboutme" class="about-me">
+            <h2 data-i18n="about_title">About Me</h2>
+            <p data-i18n="about_text"> Anas Elmarihi ,I am an IT student from Morocco with a strong passion for
+                technology, design, and problem-solving. I enjoy learning new tools, building creative projects, and
+                exploring how technology can make life easier and smarter. My main goal is to keep improving my skills
+                every day and to share what I learn with others who want to grow in the tech world.</p>
+            <p>Email : <a href="mailto:anaselmarihi2021@gmail.com">anaselmarihi2021@gmail.com</a></p>
+            <p>phone : <a href="tel:+2120780055001"> +212 0780055001</a></p>
+
+        </div>
+
+        <div id="Contactme" class="contact-me">
+            <h2 data-i18n="contact_title">Contact Me</h2>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/anas-elmarihi-77782b388/" target="_blank"><i
+                        class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+                <a href="https://github.com/Anas-Elma" target="_blank"><i class="fa fa-github"
+                        style="font-size:24px"></i></a>
+                <a href="https://x.com/A145Anas" target="_blank"><i class='fa fa-twitter'
+                        style="font-size:24px"></i></a>
+                <a href="https://www.instagram.com/anasitachi17/?next=%2Fexplore%2F" target="_blank"><i
+                        class='fa fa-instagram' style="font-size:24px"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_copyright">© 2025 TechRoadmaps By Anas Elmarihi | All Rights Reserved.</p>
+    </footer>
+
+    <div class="wrapper">
+        <span class="icon-close"><i class='bx bx-x'></i></span>
+
+        <!-- Login Form -->
+        <div class="form-box login">
+            <h2 data-i18n="login_title">Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" required>
+                    <label data-i18n="label_email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" required>
+                    <label data-i18n="label_password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> <span data-i18n="remember_me">Remember me</span></label>
+                    <a href="#" data-i18n="forgot_password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" data-i18n="login_button">Login</button>
+                <div class="login-register">
+                    <p><span data-i18n="no_account">Don't have an account?</span> <a href="#" class="register-link"
+                            data-i18n="register_link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-box register">
+            <h2 data-i18n="register_title">Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input type="text" required>
+                    <label data-i18n="label_username">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" required>
+                    <label data-i18n="label_email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" required>
+                    <label data-i18n="label_password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> <span data-i18n="agree_terms">I agree to the terms &
+                            conditions</span></label>
+                </div>
+                <button type="submit" class="btn" data-i18n="register_button">Register</button>
+                <div class="login-register">
+                    <p><span data-i18n="have_account">Already have an account?</span> <a href="#" class="login-link"
+                            data-i18n="login_link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,917 @@
+{
+  "frontend": {
+    "title": "Frontend Development",
+    "tools": [
+      { 
+        "id": "html", 
+        "name": "HTML", 
+        "introduction": "HTML (HyperText Markup Language) is the foundational markup language for creating web pages. It structures content using elements like headings, paragraphs, and images, forming the skeleton of every site.", 
+        "courses": [{ "name": "MDN Web Docs: HTML Basics", "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" }], 
+        "youtube": [{ "name": "HTML Crash Course For Absolute Beginners", "url": "https://www.youtube.com/watch?v=kUMe1FH4CHE" }],
+        "quiz": [
+          { "question": "What does HTML stand for?", "options": ["Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"], "answer": 0 },
+          { "question": "Which tag is used for the largest heading?", "options": ["<h6>", "<h1>", "<head>"], "answer": 1 },
+          { "question": "Which character is used to indicate an end tag?", "options": ["*", "/", "<"], "answer": 1 },
+          { "question": "What is the correct HTML element for inserting a line break?", "options": ["<lb>", "<break>", "<br>"], "answer": 2 },
+          { "question": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?", "options": ["title", "src", "alt"], "answer": 2 },
+          { "question": "Which doctype is correct for HTML5?", "options": ["<!DOCTYPE html>", "<!DOCTYPE HTML5>", "<!DOCTYPE html PUBLIC ...>"], "answer": 0 },
+          { "question": "Which element is used to define an unordered list?", "options": ["<ol>", "<ul>", "<li>"], "answer": 1 },
+          { "question": "Which attribute is used to specify the URL of a link?", "options": ["link", "href", "src"], "answer": 1 },
+          { "question": "How can you open a link in a new tab/browser window?", "options": ["target='_blank'", "target='new'", "target='_window'"], "answer": 0 },
+          { "question": "Which tag is used to define a table row?", "options": ["<th>", "<td>", "<tr>"], "answer": 2 },
+          { "question": "What is the correct HTML for making a checkbox?", "options": ["<input type='check'>", "<check>", "<input type='checkbox'>"], "answer": 2 },
+          { "question": "Which element is used to create a drop-down list?", "options": ["<input type='dropdown'>", "<list>", "<select>"], "answer": 2 },
+          { "question": "Which HTML5 element defines a footer for a document or section?", "options": ["<bottom>", "<footer>", "<section>"], "answer": 1 },
+          { "question": "Which tag is used to embed a video in HTML5?", "options": ["<video>", "<movie>", "<media>"], "answer": 0 },
+          { "question": "Which HTML element is used to draw graphics, on the fly, via scripting?", "options": ["<canvas>", "<svg>", "<paint>"], "answer": 0 }
+        ]
+      },
+      { 
+        "id": "css", 
+        "name": "CSS", 
+        "introduction": "CSS (Cascading Style Sheets) is used to style and layout web pages. It controls colors, fonts, spacing, and responsive design, making websites visually appealing on all devices.", 
+        "courses": [{ "name": "MDN Web Docs: CSS First Steps", "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps" }], 
+        "youtube": [{ "name": "CSS Crash Course For Absolute Beginners", "url": "https://www.youtube.com/watch?v=yfoY53QXEnI" }],
+        "quiz": [
+          { "question": "Which property is used to change the background color?", "options": ["color", "bgcolor", "background-color"], "answer": 2 },
+          { "question": "How do you select an element with id 'demo'?", "options": [".demo", "#demo", "demo"], "answer": 1 },
+          { "question": "Which CSS property controls the text size?", "options": ["font-style", "text-size", "font-size"], "answer": 2 },
+          { "question": "How do you make each word in a text start with a capital letter?", "options": ["text-transform: capitalize", "text-style: capitalize", "transform: capitalize"], "answer": 0 },
+          { "question": "Which property is used to change the font of an element?", "options": ["font-family", "font-weight", "font-style"], "answer": 0 },
+          { "question": "Which property controls the space between the element border and its content?", "options": ["margin", "padding", "border-spacing"], "answer": 1 },
+          { "question": "How do you make a list that lists its items with squares?", "options": ["list-type: square", "list-style-type: square", "list: square"], "answer": 1 },
+          { "question": "Which property is used to change the left margin of an element?", "options": ["padding-left", "margin-left", "indent"], "answer": 1 },
+          { "question": "Which CSS property allows you to include padding and border in an element's total width and height?", "options": ["box-sizing: border-box", "box-sizing: content-box", "width: auto"], "answer": 0 },
+          { "question": "Which property specifies the stack order of an element?", "options": ["z-index", "s-index", "stack-order"], "answer": 0 },
+          { "question": "Which CSS3 property is used for creating animations?", "options": ["animation", "motion", "transition"], "answer": 0 },
+          { "question": "How do you select elements with class name 'test'?", "options": [".test", "#test", "*test"], "answer": 0 },
+          { "question": "Which property is used to align text to the center?", "options": ["text-align", "align-text", "center-text"], "answer": 0 },
+          { "question": "What is the default value of the position property?", "options": ["relative", "fixed", "static"], "answer": 2 },
+          { "question": "Which query is used for responsive design?", "options": ["@media", "@screen", "@responsive"], "answer": 0 }
+        ]
+      },
+      { 
+        "id": "javascript", 
+        "name": "JavaScript", 
+        "introduction": "JavaScript is the programming language that adds interactivity to websites. It handles user events, manipulates the DOM, and fetches data, turning static pages into dynamic applications.", 
+        "courses": [{ "name": "MDN Web Docs: JavaScript Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" }], 
+        "youtube": [{ "name": "JavaScript Crash Course For Beginners", "url": "https://www.youtube.com/watch?v=hdI2bqOjy3c" }],
+        "quiz": [
+          { "question": "Which symbol is used for comments in JavaScript?", "options": ["//", "<!--", "#"], "answer": 0 },
+          { "question": "How do you declare a variable?", "options": ["var", "let", "const", "All of the above"], "answer": 3 },
+          { "question": "Inside which HTML element do we put the JavaScript?", "options": ["<js>", "<scripting>", "<script>"], "answer": 2 },
+          { "question": "How do you write 'Hello World' in an alert box?", "options": ["msg('Hello World')", "alert('Hello World')", "msgBox('Hello World')"], "answer": 1 },
+          { "question": "How do you create a function in JavaScript?", "options": ["function myFunction()", "function:myFunction()", "create myFunction()"], "answer": 0 },
+          { "question": "How do you call a function named 'myFunction'?", "options": ["call myFunction()", "myFunction()", "call function myFunction()"], "answer": 1 },
+          { "question": "How to write an IF statement in JavaScript?", "options": ["if i = 5", "if i == 5 then", "if (i == 5)"], "answer": 2 },
+          { "question": "How does a WHILE loop start?", "options": ["while (i <= 10)", "while i = 1 to 10", "while (i <= 10; i++)"], "answer": 0 },
+          { "question": "How can you add a comment that has more than one line?", "options": ["<!-- -->", "//", "/* */"], "answer": 2 },
+          { "question": "What is the correct way to write a JavaScript array?", "options": ["var colors = (1:'red', 2:'green')", "var colors = ['red', 'green']", "var colors = 'red', 'green'"], "answer": 1 },
+          { "question": "Which event occurs when the user clicks on an HTML element?", "options": ["onmouseclick", "onchange", "onclick"], "answer": 2 },
+          { "question": "How do you declare a JavaScript variable with the same value as 5?", "options": ["v x = 5", "var x = 5", "variable x = 5"], "answer": 1 },
+          { "question": "Which operator is used to assign a value to a variable?", "options": ["*", "=", "-"], "answer": 1 },
+          { "question": "What will the following code return: Boolean(10 > 9)", "options": ["NaN", "false", "true"], "answer": 2 },
+          { "question": "Is JavaScript case-sensitive?", "options": ["Yes", "No", "Only in functions"], "answer": 0 }
+        ]
+      },
+      { "id": "git", "name": "Version Control (Git)", "introduction": "Git is an essential version control system that tracks changes in your code. It allows you to collaborate with others, revert to previous versions, and manage different features in parallel using branches.", "courses": [{ "name": "The Odin Project: Git Basics", "url": "https://www.theodinproject.com/lessons/foundations-git-basics" }], "youtube": [{ "name": "Git and GitHub for Beginners", "url": "https://www.youtube.com/watch?v=RGOj5yH7evk" }], "quiz": [{ "question": "Which command is used to initialize a git repository?", "options": ["git start", "git init", "git new"], "answer": 1 }] },
+      { "id": "frameworks", "name": "Choose a Framework", "introduction": "Modern frontend development relies on frameworks like React, Vue, or Angular. They provide a structured way to build complex user interfaces with reusable components and state management.", "courses": [{ "name": "React Official Tutorial", "url": "https://react.dev/learn" }, { "name": "Vue.js Official Guide", "url": "https://vuejs.org/guide/introduction.html" }], "youtube": [{ "name": "React JS Crash Course", "url": "https://www.youtube.com/watch?v=sBws8MSXN7A" }], "quiz": [{ "question": "Which of these is a JavaScript framework?", "options": ["Laravel", "React", "Django"], "answer": 1 }] },
+      { "id": "packagemanagers", "name": "Package Managers", "introduction": "Package managers like npm (Node Package Manager) or yarn are tools that automate the process of installing, updating, and managing the external libraries (dependencies) your project uses.", "courses": [{ "name": "npm Docs: Getting Started", "url": "https://docs.npmjs.com/getting-started" }], "youtube": [{ "name": "NPM Crash Course", "url": "https://www.youtube.com/watch?v=jHDhaSSKmB0" }], "quiz": [{ "question": "What does npm stand for?", "options": ["Node Package Manager", "New Project Manager", "Node Project Maker"], "answer": 0 }] },
+      { "id": "buildtools", "name": "Build Tools", "introduction": "Build tools like Vite or Webpack are used to bundle your project's files (JavaScript, CSS, images) into optimized assets for the browser. They also provide features like a development server and hot module replacement.", "courses": [{ "name": "Vite Official Guide", "url": "https://vitejs.dev/guide/" }], "youtube": [{ "name": "Vite Crash Course", "url": "https://www.youtube.com/watch?v=KCrXgy8qtjM" }], "quiz": [{ "question": "What is the main purpose of a build tool?", "options": ["To write code", "To bundle and optimize assets", "To test code"], "answer": 1 }] },
+      { "id": "testing", "name": "Testing", "introduction": "Writing tests for your code ensures its quality and prevents bugs. Common types include unit tests (for individual functions) and integration tests (for multiple components working together), often using tools like Jest or Vitest.", "courses": [{ "name": "Jest Official Docs", "url": "https://jestjs.io/docs/getting-started" }], "youtube": [{ "name": "Jest Crash Course", "url": "https://www.youtube.com/watch?v=IPiUDhwnZxA" }], "quiz": [{ "question": "Which tool is commonly used for testing JavaScript?", "options": ["Jest", "Gulp", "Sass"], "answer": 0 }] },
+      { "id": "typescript", "name": "TypeScript", "introduction": "TypeScript is a superset of JavaScript that adds static types. This helps you catch errors during development rather than in production, and improves code readability and maintainability, especially in large projects.", "courses": [{ "name": "TypeScript for Beginners", "url": "https://www.totaltypescript.com/tutorials/beginners-typescript" }], "youtube": [{ "name": "TypeScript - The Basics", "url": "https://www.youtube.com/watch?v=ahCwqrYpIuM" }], "quiz": [{ "question": "TypeScript is a superset of which language?", "options": ["Java", "Python", "JavaScript"], "answer": 2 }] }
+    ]
+  },
+  "backend": {
+    "title": "Backend Development",
+    "tools": [
+      { 
+        "id": "nodejs", 
+        "name": "Node.js", 
+        "introduction": "Node.js is a powerful, open-source, cross-platform JavaScript runtime built on Chrome’s V8 engine that allows developers to run JavaScript code on the server side. It uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications such as chat servers, APIs, and streaming services. With its vast ecosystem of packages available through npm, Node.js enables developers to quickly build scalable network applications using a single programming language across both the client and server.", 
+        "courses": [{ "name": "W3schools Node.js tutorial", "url": "https://www.w3schools.com/nodejs/default.asp" }], 
+        "youtube": [{"name" : "Node.js Full Course by freecodecamp.org", "url":"https://www.youtube.com/watch?v=Oe421EPjeBE"}],
+        "quiz": [
+          { "question": "What engine is Node.js built on?", "options": ["SpiderMonkey", "V8", "Chakra"], "answer": 1 },
+          { "question": "Node.js is primarily used for?", "options": ["Client-side scripting", "Server-side programming", "Database management"], "answer": 1 },
+          { "question": "Which module is used to handle file system?", "options": ["fs", "file", "system"], "answer": 0 },
+          { "question": "To include a module, which function is used?", "options": ["include()", "require()", "import()"], "answer": 1 },
+          { "question": "Which of the following is a Node.js framework?", "options": ["React", "Express.js", "Angular"], "answer": 1 },
+          { "question": "Node.js is:", "options": ["Single-threaded", "Multi-threaded", "None of the above"], "answer": 0 },
+          { "question": "What is the default scope in a Node.js module?", "options": ["Global", "Local", "Public"], "answer": 1 },
+          { "question": "Which method is used to read a file asynchronously?", "options": ["fs.read()", "fs.readFile()", "fs.readFileSync()"], "answer": 1 },
+          { "question": "What does NPM stand for?", "options": ["Node Project Manager", "Node Package Manager", "New Package Manager"], "answer": 1 },
+          { "question": "Which object is used to handle HTTP requests?", "options": ["http", "net", "os"], "answer": 0 },
+          { "question": "How do you start a Node REPL?", "options": ["node start", "node", "repl"], "answer": 1 },
+          { "question": "Which event is emitted when an unhandled exception occurs?", "options": ["error", "uncaughtException", "fail"], "answer": 1 },
+          { "question": "What is the purpose of 'module.exports'?", "options": ["To export functions/objects", "To import modules", "To delete modules"], "answer": 0 },
+          { "question": "Which core module provides utilities for working with file paths?", "options": ["url", "path", "fs"], "answer": 1 },
+          { "question": "What is a stream in Node.js?", "options": ["A database", "A collection of data", "A sequence of data elements made available over time"], "answer": 2 }
+        ]
+      },
+      { "id": "python-backend", "name": "Python (Django/Flask)", "introduction": "Python, with its popular web frameworks Flask and Django, offers developers a complete range of tools for building everything from simple prototypes to large-scale web applications. Flask is a lightweight micro-framework that provides the flexibility to structure applications freely, making it ideal for smaller projects and APIs. Django, on the other hand, is a high-level framework that follows the “batteries-included” philosophy, offering built-in tools for database management, authentication, routing, and templating. Together, Flask and Django demonstrate Python’s versatility, simplicity, and readability in modern web development.", 
+      "courses": [
+        { "name" : "W3schools Python tutorial", "url" : "https://www.w3schools.com/python/default.asp" },
+        { "name" : "W3schools Django tutorial", "url" : "https://www.w3schools.com/django/index.php" },
+        { "name" : "Flask Official Documentation", "url" : "https://flask.palletsprojects.com/en/3.0.x/" }
+      ],
+        "youtube": [
+          { "name" : "Python full course","url": "https://www.youtube.com/watch?v=ix9cRaBkVe0&t=1126s"},
+          { "name" : "Django full course","url": "https://www.youtube.com/watch?v=F5mRW0jo-U4"},
+          { "name" : "Flask full course","url": "https://www.youtube.com/watch?v=Z1RJmh_OqeA"}
+        ],
+        "quiz": [
+          { "question": "Which of these is a micro-framework?", "options": ["Django", "Flask", "Pyramid"], "answer": 1 },
+          { "question": "What is the default port for Flask?", "options": ["8000", "5000", "3000"], "answer": 1 },
+          { "question": "Which file is used to configure a Django project?", "options": ["config.py", "settings.py", "main.py"], "answer": 1 },
+          { "question": "What template engine does Flask use by default?", "options": ["Jinja2", "Blade", "EJS"], "answer": 0 },
+          { "question": "In Django, how do you create a migration?", "options": ["python manage.py makemigrations", "python manage.py migrate", "python manage.py create"], "answer": 0 },
+          { "question": "Which command runs the Django development server?", "options": ["python runserver", "python manage.py runserver", "django start"], "answer": 1 },
+          { "question": "What is WSGI?", "options": ["Web Server Gateway Interface", "Web Socket Gateway Interface", "Web Service General Interface"], "answer": 0 },
+          { "question": "Which decorator is used for routing in Flask?", "options": ["@app.route", "@app.path", "@app.url"], "answer": 0 },
+          { "question": "What is the Django ORM used for?", "options": ["Routing", "Database interaction", "Templating"], "answer": 1 },
+          { "question": "Which of these is NOT a Python web framework?", "options": ["FastAPI", "Spring", "Bottle"], "answer": 1 },
+          { "question": "How do you install Flask?", "options": ["pip install flask", "npm install flask", "apt-get install flask"], "answer": 0 },
+          { "question": "What is the purpose of a virtual environment?", "options": ["To run Java", "To isolate project dependencies", "To speed up Python"], "answer": 1 },
+          { "question": "In Django, what is a 'view'?", "options": ["The database", "The user interface", "A function that handles requests"], "answer": 2 },
+          { "question": "Which file handles URLs in Django?", "options": ["urls.py", "routes.py", "paths.py"], "answer": 0 },
+          { "question": "What does MVC stand for?", "options": ["Model View Controller", "Main View Code", "Model Visual Code"], "answer": 0 }
+        ]
+      },
+      { "id": "php", "name": "PHP", "introduction": "PHP(Hypertext Preprocessor) is a long-established and widely used server-side scripting language designed for building dynamic and interactive web applications. It integrates seamlessly with databases like MySQL and PostgreSQL and powers some of the most popular content management systems in the world, including WordPress, Drupal, and Joomla. Known for its ease of deployment and compatibility with various web servers, PHP remains a reliable choice for developers creating websites, APIs, and enterprise-level web platforms. Modern PHP, with frameworks like Laravel and Symfony, also supports clean architecture, object-oriented programming, and robust security features for professional-grade web development.", 
+        "courses": [
+          { "name": "W3schools PHP tutorial", "url": "https://www.w3schools.com/php/default.asp" },
+          { "name": "PHP The Right Way", "url": "https://phptherightway.com/" }
+       ], 
+        "youtube": [
+          { "name": "PHP For Absolute Beginners", "url": "https://www.youtube.com/watch?v=zZ6vybT1HQs&t=17s"},
+          { "name": "PHP Full Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c" }
+        ],
+        "quiz": [
+          { "question": "What does PHP stand for?", "options": ["Personal Home Page", "Hypertext Preprocessor", "Private Hosting Platform"], "answer": 1 },
+          { "question": "Which symbol starts a variable in PHP?", "options": ["@", "$", "%"], "answer": 1 },
+          { "question": "How do you print text in PHP?", "options": ["echo", "print_line", "write"], "answer": 0 },
+          { "question": "Which character ends a PHP statement?", "options": [".", ";", ":"], "answer": 1 },
+          { "question": "How do you start a PHP block?", "options": ["<?php", "<script>", "<?"], "answer": 0 },
+          { "question": "Which superglobal holds form data sent via POST?", "options": ["$_GET", "$_POST", "$_REQUEST"], "answer": 1 },
+          { "question": "How do you create a function in PHP?", "options": ["function myFunction()", "create myFunction()", "def myFunction()"], "answer": 0 },
+          { "question": "Which function includes a file?", "options": ["include()", "import()", "load()"], "answer": 0 },
+          { "question": "How do you comment a single line in PHP?", "options": ["//", "<!--", "#"], "answer": 0 },
+          { "question": "Which operator is used for concatenation?", "options": ["+", ".", "&"], "answer": 1 },
+          { "question": "What is the correct way to connect to MySQL?", "options": ["mysqli_connect()", "mysql_connect()", "connect_mysql()"], "answer": 0 },
+          { "question": "Which loop is best for iterating through arrays?", "options": ["for", "while", "foreach"], "answer": 2 },
+          { "question": "How do you define a constant?", "options": ["define()", "const()", "constant()"], "answer": 0 },
+          { "question": "Which function returns the length of a string?", "options": ["len()", "strlen()", "length()"], "answer": 1 },
+          { "question": "What is Laravel?", "options": ["A PHP Framework", "A Database", "A CMS"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "rest-apis",
+        "name": "REST APIs",
+        "introduction": "REST (Representational State Transfer) is an architectural style for designing networked applications. Building RESTful APIs is a fundamental backend skill, allowing your frontend to communicate with your server to create, read, update, and delete data.",
+        "courses": [
+          { "name": "What is a REST API?", "url": "https://www.redhat.com/en/topics/api/what-is-a-rest-api" }
+        ],
+        "youtube": [
+          { "name": "REST API Crash Course", "url": "https://www.youtube.com/watch?v=qbLc5a9jdXo&pp=ygUPcmVzdCBhcGkgY291cnNl" }
+        ],
+        "quiz": [
+          { "question": "Which HTTP method is used to retrieve data?", "options": ["POST", "GET", "DELETE"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "authentication",
+        "name": "Authentication",
+        "introduction": "Authentication is the process of verifying a user's identity. Common backend techniques include session-based authentication and token-based authentication using JWT (JSON Web Tokens) to secure your application's endpoints.",
+        "courses": [
+          { "name": "JWT Introduction", "url": "https://jwt.io/introduction" }
+        ],
+        "youtube": [
+          { "name": "Learn JWT in 30 minutes", "url": "https://www.youtube.com/watch?v=mbsmsi7l3r4" }
+        ],
+        "quiz": [
+          { "question": "What does JWT stand for?", "options": ["Java Web Token", "JSON Web Token", "JavaScript Web Token"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "graphql",
+        "name": "GraphQL (Optional)",
+        "introduction": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. It provides a more efficient and flexible alternative to REST, allowing clients to request exactly the data they need.",
+        "courses": [
+          { "name": "Introduction to GraphQL", "url": "https://graphql.org/learn/" }
+        ],
+        "youtube": [
+          { "name": "GraphQL Crash Course", "url": "https://www.youtube.com/watch?v=ed8SzALpx1Q" }
+        ],
+        "quiz": [
+          { "question": "What is a key benefit of GraphQL over REST?", "options": ["It uses XML", "It prevents over-fetching data", "It is older"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "docker",
+        "name": "Containers (Docker)",
+        "introduction": "Docker is a platform for developing, shipping, and running applications in containers. It allows you to package your backend service and its dependencies into an isolated environment, ensuring it runs consistently everywhere.",
+        "courses": [
+          { "name": "Docker Curriculum", "url": "https://docker-curriculum.com/" }
+        ],
+        "youtube": [
+          { "name": "Docker Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=3c-iBn73dDE" }
+        ],
+        "quiz": [
+          { "question": "What is a Docker container?", "options": ["A physical server", "A lightweight, standalone executable package", "A database"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "cloud",
+        "name": "Cloud Deployment",
+        "introduction": "Deploying your application to the cloud makes it accessible to the world. Learning to use services like AWS (Amazon Web Services), Google Cloud, or Heroku is a critical step in taking your project from local development to production.",
+        "courses": [
+          { "name": "Deploying to AWS for Beginners", "url": "https://aws.amazon.com/getting-started/hands-on/deploy-nodejs-web-app/" }
+        ],
+        "youtube": [
+          { "name": "What is Cloud Computing?", "url": "https://www.youtube.com/watch?v=M988_fsOSWo&pp=ygUPY2xvdWQgY29tcHV0aW5n" }
+        ],
+        "quiz": [
+          { "question": "Which of these is a cloud provider?", "options": ["AWS", "MySQL", "React"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "caching",
+        "name": "Caching",
+        "introduction": "Caching is the process of storing copies of data in a temporary storage location (a cache) so that it can be accessed more quickly. Backend caching with tools like Redis can dramatically improve your application's speed and reduce database load.",
+        "courses": [
+          { "name": "Redis University", "url": "https://redis.com/university/" }
+        ],
+        "youtube": [
+          { "name": "What is Caching?", "url": "https://www.youtube.com/watch?v=6FyXURRVmR0&pp=ygURY2FjaGluZyBleHBsYWluZWQ%3D" }
+        ],
+        "quiz": [
+          { "question": "What is the main purpose of caching?", "options": ["To encrypt data", "To speed up data retrieval", "To delete data"], "answer": 1 }
+        ]
+      }
+    ]
+  },
+  "programming": {
+    "title": "Programming Fundamentals",
+    "tools": [
+      {
+        "id": "python-prog",
+        "name": "Python",
+        "introduction": "Python is celebrated for its clean, readable syntax, making it the top choice for beginners. It's a versatile powerhouse used in web development, data science, AI, and automation, backed by a massive community and library ecosystem.",
+        "courses": [
+          { "name": "Codecademy: Learn Python 3", "url": "https://www.codecademy.com/learn/learn-python-3" }
+        ],
+        "youtube": [
+          { "name": "Learn Python - Full Course for Beginners", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw" }
+        ],
+        "quiz": [
+          { "question": "Python is known for its:", "options": ["Complex syntax", "Readability and simplicity", "Manual memory management"], "answer": 1 },
+          { "question": "How do you output text to the console?", "options": ["echo()", "print()", "console.log()"], "answer": 1 },
+          { "question": "Which keyword is used to define a function?", "options": ["func", "def", "function"], "answer": 1 },
+          { "question": "How do you create a list?", "options": ["[]", "{}", "()"], "answer": 0 },
+          { "question": "Which operator is used for exponentiation?", "options": ["^", "**", "//"], "answer": 1 },
+          { "question": "What is a tuple?", "options": ["Mutable list", "Immutable list", "Dictionary"], "answer": 1 },
+          { "question": "How do you start a comment?", "options": ["//", "#", "/*"], "answer": 1 },
+          { "question": "Which data type is used for True/False?", "options": ["Boolean", "String", "Integer"], "answer": 0 },
+          { "question": "How do you import a module?", "options": ["include", "import", "require"], "answer": 1 },
+          { "question": "What is the output of len('hello')?", "options": ["4", "5", "6"], "answer": 1 },
+          { "question": "Which loop is used to iterate over a sequence?", "options": ["for", "while", "do-while"], "answer": 0 },
+          { "question": "How do you check if a key exists in a dictionary?", "options": ["exists", "in", "has"], "answer": 1 },
+          { "question": "What is PEP 8?", "options": ["A Python version", "Style guide for Python code", "A library"], "answer": 1 },
+          { "question": "Which function converts a string to an integer?", "options": ["str()", "int()", "float()"], "answer": 1 },
+          { "question": "What does 'pip' do?", "options": ["Installs packages", "Runs code", "Debugs code"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "java-prog",
+        "name": "Java",
+        "introduction": "Java is a class-based, object-oriented language known for its 'write once, run anywhere' capability. It is a cornerstone of enterprise-level applications, large-scale systems, and Android mobile app development due to its performance and stability.",
+        "courses": [
+          { "name": "Java Programming Masterclass - Udemy", "url": "https://www.udemy.com/course/java-the-complete-java-developer-course/" }
+        ],
+        "youtube": [
+          { "name": "Java Full Course for free", "url": "https://www.youtube.com/watch?v=A74TOX803D0" }
+        ],
+        "quiz": [
+          { "question": "What allows Java to run anywhere?", "options": ["The JVM (Java Virtual Machine)", "The compiler", "The browser"], "answer": 0 },
+          { "question": "Which keyword is used to define a class?", "options": ["class", "struct", "object"], "answer": 0 },
+          { "question": "What is the entry point of a Java program?", "options": ["start()", "main()", "run()"], "answer": 1 },
+          { "question": "Which data type is used for text?", "options": ["String", "char", "Text"], "answer": 0 },
+          { "question": "How do you declare an integer variable?", "options": ["int x;", "integer x;", "num x;"], "answer": 0 },
+          { "question": "Which keyword is used for inheritance?", "options": ["implements", "extends", "inherits"], "answer": 1 },
+          { "question": "What is an object?", "options": ["A class instance", "A variable", "A function"], "answer": 0 },
+          { "question": "Which loop is guaranteed to execute at least once?", "options": ["for", "while", "do-while"], "answer": 2 },
+          { "question": "How do you create a single-line comment?", "options": ["//", "#", "/*"], "answer": 0 },
+          { "question": "Which keyword makes a variable constant?", "options": ["const", "final", "static"], "answer": 1 },
+          { "question": "What is the size of an int in Java?", "options": ["16 bit", "32 bit", "64 bit"], "answer": 1 },
+          { "question": "Which package contains the Scanner class?", "options": ["java.util", "java.io", "java.lang"], "answer": 0 },
+          { "question": "What is the default value of a boolean?", "options": ["true", "false", "null"], "answer": 1 },
+          { "question": "Which keyword is used to access the parent class?", "options": ["this", "super", "parent"], "answer": 1 },
+          { "question": "Java is:", "options": ["Procedural", "Object-Oriented", "Functional"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "cplusplus-prog",
+        "name": "C++",
+        "introduction": "C++ is a high-performance language that provides granular control over system resources and memory. It is the language of choice for performance-critical applications like game engines, operating systems, and high-frequency trading software.",
+        "courses": [
+          { "name": "Learn C++", "url": "https://www.learncpp.com/" }
+        ],
+        "youtube": [
+          { "name": "C++ Tutorial for Beginners - Full Course", "url": "https://www.youtube.com/watch?v=vLnPwxZdW4Y" }
+        ],
+        "quiz": [
+          { "question": "C++ is often used for:", "options": ["Web frontend", "High-performance applications", "Scripting"], "answer": 1 },
+          { "question": "Which header file is needed for input/output?", "options": ["<iostream>", "<stdio.h>", "<conio.h>"], "answer": 0 },
+          { "question": "How do you print to the console?", "options": ["cout <<", "print()", "System.out.println"], "answer": 0 },
+          { "question": "Which operator is used to access members of a structure pointer?", "options": [".", "->", "::"], "answer": 1 },
+          { "question": "How do you declare a pointer?", "options": ["int *ptr;", "int &ptr;", "int ptr;"], "answer": 0 },
+          { "question": "What is a class in C++?", "options": ["A user-defined data type", "A function", "A variable"], "answer": 0 },
+          { "question": "Which keyword is used to create an object?", "options": ["new", "create", "make"], "answer": 0 },
+          { "question": "What is the destructor symbol?", "options": ["~", "!", "#"], "answer": 0 },
+          { "question": "Which loop is best when the number of iterations is known?", "options": ["while", "for", "do-while"], "answer": 1 },
+          { "question": "How do you create a reference variable?", "options": ["int &ref = x;", "int *ref = x;", "int ref = x;"], "answer": 0 },
+          { "question": "What does 'public' mean in a class?", "options": ["Accessible from outside", "Accessible only inside", "Accessible by children"], "answer": 0 },
+          { "question": "Which function is called automatically when an object is created?", "options": ["Destructor", "Constructor", "Main"], "answer": 1 },
+          { "question": "What is function overloading?", "options": ["Same name, different parameters", "Same name, same parameters", "Different name"], "answer": 0 },
+          { "question": "Which keyword is used to return a value?", "options": ["get", "return", "send"], "answer": 1 },
+          { "question": "C++ supports:", "options": ["Only OOP", "Only Procedural", "Both OOP and Procedural"], "answer": 2 }
+        ]
+      },
+      {
+       "id": "functions",
+        "name": "Functions",
+        "introduction": "Functions are the basic building blocks of any program. They are reusable blocks of code that perform a specific task. Learning to write clean, modular functions is the first step toward writing organized and maintainable code.",
+        "courses": [
+          { "name": "W3Schools: Functions (JavaScript example)", "url": "https://www.w3schools.com/js/js_functions.asp" }
+        ],
+        "youtube": [
+          { "name": "Programming Basics: Functions", "url": "https://www.youtube.com/watch?v=HFaxylC7bUc&pp=ygUUamF2YXNjcmlwdCBmdW5jdGlvbnPSBwkJBgoBhyohjO8%3D" }
+        ],
+        "quiz": [
+          { "question": "What is a function?", "options": ["A variable", "A reusable block of code", "A database"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "data-structures",
+        "name": "Data Structures",
+        "introduction": "Data structures are formats for organizing, managing, and storing data. Understanding fundamental structures like Arrays, Lists, Stacks, Queues, and Hash Maps is essential for writing efficient and effective code.",
+        "courses": [
+          { "name": "GeeksforGeeks: Data Structures", "url": "https://www.geeksforgeeks.org/data-structures/" }
+        ],
+        "youtube": [
+          { "name": "Data Structures Easy to Advanced Course", "url": "https://www.youtube.com/watch?v=RBSGKlAvoiM" }
+        ],
+        "quiz": [
+          { "question": "Which data structure follows LIFO (Last In, First Out)?", "options": ["Queue", "Stack", "Array"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "oop",
+        "name": "Object-Oriented Programming (OOP)",
+        "introduction": "OOP is a programming paradigm based on the concept of 'objects', which can contain data and code. It helps to structure software into simple, reusable pieces of code blueprints (classes). Core concepts include Inheritance, Encapsulation, and Polymorphism.",
+        "courses": [
+          { "name": "MDN Web Docs: Object-oriented programming", "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming" }
+        ],
+        "youtube": [
+          { "name": "Object-Oriented Programming - The Four Pillars of OOP", "url": "https://www.youtube.com/watch?v=SiBw7os-_zI" }
+        ],
+        "quiz": [
+          { "question": "Which is NOT a pillar of OOP?", "options": ["Encapsulation", "Compilation", "Polymorphism"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "algorithms",
+        "name": "Algorithms",
+        "introduction": "An algorithm is a step-by-step procedure for solving a problem or accomplishing a task. Studying common algorithms for sorting (like Quick Sort) and searching (like Binary Search) teaches you how to think critically about code efficiency and performance.",
+        "courses": [
+          { "name": "Khan Academy: Algorithms", "url": "https://www.khanacademy.org/computing/computer-science/algorithms" }
+        ],
+        "youtube": [
+          { "name": "Algorithms and Data Structures Tutorial", "url": "https://www.youtube.com/watch?v=8hly31xKli0" }
+        ],
+        "quiz": [
+          { "question": "What is an algorithm?", "options": ["A programming language", "A step-by-step procedure for solving a problem", "A hardware component"], "answer": 1 }
+        ]
+      }
+      
+    ]
+  },
+  "cybersecurity": {
+    "title": "Cybersecurity",
+    "tools": [
+      {
+        "id": "networking-fundamentals",
+        "name": "Networking Fundamentals",
+        "introduction": "Understanding how networks work is the absolute foundation of cybersecurity. You need to know about the TCP/IP model, DNS, firewalls, and routing to understand how attackers exploit vulnerabilities and how to defend against them.",
+        "courses": [
+          { "name": "Professor Messer's CompTIA Network+ Training Course", "url": "https://www.professormesser.com/network-plus/n10-008/n10-008-training-course/" }
+        ],
+        "youtube": [
+          { "name": "Networking for Ethical Hacking", "url": "https://www.youtube.com/watch?v=p3vaaD9pn9I" }
+        ],
+        "quiz": [
+          { "question": "What does DNS stand for?", "options": ["Domain Name System", "Digital Network Service", "Data Network Security"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "os-security",
+        "name": "OS Security (Linux/Windows)",
+        "introduction": "Operating systems are the primary target for attackers. Learning to secure both Linux and Windows environments by managing users, permissions, processes, and services is a critical skill for any cybersecurity professional.",
+        "courses": [
+          { "name": "Linux Security for Beginners", "url": "https://www.udemy.com/course/basic-linux-security/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Search_DSA_Beta_Prof_la.EN_cc.ROW-English&campaigntype=Search&portfolio=ROW-English&language=EN&product=Course&test=&audience=DSA&topic=&priority=Beta&utm_content=deal4584&utm_term=_._ag_162511579564_._ad_696197165427_._kw__._de_c_._dm__._pl__._ti_dsa-2434662753489_._li_1029479_._pd__._&matchtype=&gad_source=1&gad_campaignid=21168154305&gbraid=0AAAAADROdO0rwg3rO2OGMY-8s34uKW887&gclid=CjwKCAjw6vHHBhBwEiwAq4zvA8ehxpDuYbwfn6rH3Jg66-iVJvYYVSEonqkFEZSardOOkkbcx1BytBoChYwQAvD_BwE&couponCode=PMNVD2525" },
+          { "name": "Windows Security Fundamentals", "url": "https://www.coursera.org/learn/security-ethical-hacking-attacking-unix-and-windows" }
+        ],
+        "youtube": [
+          { "name": "Linux for Ethical Hackers", "url": "https://www.youtube.com/watch?v=YJUVNlmIO6E&pp=ygURbGludXggZm9yIGhhY2tlcnM%3D" },
+          { "name": "Windows Security Basics", "url": "https://www.youtube.com/watch?v=fNzpcB7ODxQ" }
+        ],
+        "quiz": [
+          { "question": "Which user has the highest privileges in Linux?", "options": ["Admin", "Root", "User"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "cyber-threats",
+        "name": "Common Cyber Threats",
+        "introduction": "To defend against attacks, you must first understand them. This involves studying common threats like malware (viruses, ransomware), phishing, Denial-of-Service (DoS) attacks, and Man-in-the-Middle (MitM) attacks.",
+        "courses": [
+          { "name": "Common Cyber Attacks - Cisco", "url": "https://www.cisco.com/c/en/us/products/security/common-cyberattacks.html" }
+        ],
+        "youtube": [
+          { "name": "Top Cyber Security Threats", "url": "https://www.youtube.com/watch?v=awhqnSskWjU&t=40s&pp=ygUcdG9wIDEwIGN5YmVyc2VjdXJpdHkgdGhyZWF0cw%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "What is Phishing?", "options": ["A network scan", "A fraudulent attempt to obtain sensitive information", "A virus"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "web-app-pentesting",
+        "name": "Web App Pentesting (OWASP)",
+        "introduction": "Web application penetration testing focuses on finding security flaws in websites. The OWASP Top 10 is the industry-standard guide to the most critical web application security risks, such as SQL Injection and Cross-Site Scripting (XSS).",
+        "courses": [
+          { "name": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/" }
+        ],
+        "youtube": [
+          { "name": "Web Application Penetration Testing", "url": "https://www.youtube.com/watch?v=2_lswM1S264&pp=ygUbd2ViIGFwcCBwZW5ldHJhdGlvbiB0ZXN0aW5n" }
+        ],
+        "quiz": [
+          { "question": "What does XSS stand for?", "options": ["Cross-Site Scripting", "Extra Secure Socket", "XML Site Security"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "network-pentesting",
+        "name": "Network Pentesting",
+        "introduction": "Network penetration testing involves identifying and exploiting vulnerabilities in network infrastructure. This includes scanning for open ports with Nmap, finding vulnerabilities, and attempting to gain access to systems.",
+        "courses": [
+          { "name": "TryHackMe: Nmap", "url": "https://tryhackme.com/room/furthernmap" }
+        ],
+        "youtube": [
+          { "name": "Full Ethical Hacking Course - Network Penetration Testing", "url": "https://www.youtube.com/watch?v=fNzpcB7ODxQ&t=1979s&pp=ygUbZXRoaWNhbCBoYWNraW5nIGZ1bGwgY291cnNl" }
+        ],
+        "quiz": [
+          { "question": "Which tool is commonly used for network scanning?", "options": ["Photoshop", "Nmap", "Word"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "soc-analysis",
+        "name": "SOC Analysis & SIEM",
+        "introduction": "A Security Operations Center (SOC) analyst is a cybersecurity defender. They use SIEM (Security Information and Event Management) tools like Splunk to monitor network traffic, analyze logs, and detect and respond to security incidents.",
+        "courses": [
+          { "name": "Introduction to Splunk", "url": "https://www.splunk.com/en_us/training/free-courses/splunk-fundamentals-1.html" }
+        ],
+        "youtube": [
+          { "name": "What is a SOC Analyst?", "url": "https://www.youtube.com/watch?v=56NDgBOSpUg&pp=ygUXc29jIGFuYWx5c3QgZnVsbCBjb3Vyc2U%3D" }
+        ],
+        "quiz": [
+          { "question": "What does SIEM stand for?", "options": ["Security Information and Event Management", "System Internet Email Manager", "Secure Internal External Monitor"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "malware-analysis",
+        "name": "Malware Analysis",
+        "introduction": "Malware analysis is the process of dissecting malware to understand how it works, how to identify it, and how to remove it. This involves both static analysis (examining the code) and dynamic analysis (running it in a safe environment).",
+        "courses": [
+          { "name": "Malware Analysis - TryHackMe", "url": "https://tryhackme.com/module/malware-analysis" }
+        ],
+        "youtube": [
+          { "name": "What is Malware Analysis?", "url": "https://www.youtube.com/watch?v=qA0YcYMRWyI&pp=ygUcbWFsd2FyZSBhbmFseXNpcyBmdWxsIGNvdXJzZQ%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "Examining code without running it is called:", "options": ["Dynamic Analysis", "Static Analysis", "Network Analysis"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "cloud-security",
+        "name": "Cloud Security",
+        "introduction": "As more companies move to the cloud (AWS, Azure, GCP), securing cloud infrastructure has become a critical skill. This involves configuring identity and access management (IAM), securing networks, and protecting data in the cloud.",
+        "courses": [
+          { "name": "AWS Security Fundamentals", "url": "https://aws.amazon.com/training/digital/aws-security-fundamentals/" }
+        ],
+        "youtube": [
+          { "name": "Cloud Security Full Course", "url": "https://www.youtube.com/watch?v=LTuBvQ72ohs&pp=ygUaY2xvdWQgc2VjdXJpdHkgZnVsbCBjb3Vyc2U%3D" }
+        ],
+        "quiz": [
+          { "question": "What does IAM stand for?", "options": ["Identity and Access Management", "Internet Access Monitor", "Internal Application Manager"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "incident-response",
+        "name": "Incident Response",
+        "introduction": "Incident Response (IR) is the process of responding to and managing the aftermath of a security breach. The goal is to contain the damage, eradicate the threat, and recover systems as quickly as possible while learning from the incident.",
+        "courses": [
+          { "name": "Incident Response - IBM", "url": "https://www.ibm.com/topics/incident-response" }
+        ],
+        "youtube": [
+          { "name": "The Incident Response Process", "url": "https://www.youtube.com/watch?v=-uwENcQzXj8&pp=ygUZaW5jaWRlbnQgcmVzcG9uc2UgcHJvY2Vzcw%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "What is the first step in Incident Response?", "options": ["Preparation", "Eradication", "Recovery"], "answer": 0 }
+        ]
+      }
+    ]
+  },
+  "database": {
+    "title": "Database Management",
+    "tools": [
+      {
+        "id": "sql-mastery",
+        "name": "SQL Mastery",
+        "introduction": "SQL (Structured Query Language) is the universal language for relational databases. Mastering it is non-negotiable for creating, retrieving, and manipulating data. This includes understanding queries, joins, aggregations, and data manipulation.",
+        "courses": [
+          { "name": "SQLBolt - Interactive SQL Tutorial", "url": "https://sqlbolt.com/" },
+          { "name": "W3Schools SQL Tutorial", "url": "https://www.w3schools.com/sql/" }
+        ],
+        "youtube": [
+          { "name": "SQL for Beginners Full Course", "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY" }
+        ],
+        "quiz": [
+          { "question": "Which SQL statement is used to extract data?", "options": ["INSERT", "SELECT", "UPDATE"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "data-modeling",
+        "name": "Data Modeling",
+        "introduction": "Data modeling is the process of creating a blueprint for how data will be stored in a database. It involves designing efficient, logical database schemas using techniques like normalization and creating Entity-Relationship Diagrams (ERDs) to visualize the structure.",
+        "courses": [
+          { "name": "Database Design Course - freeCodeCamp", "url": "https://www.freecodecamp.org/news/database-design-course/" }
+        ],
+        "youtube": [
+          { "name": "Database Design Tutorial", "url": "https://www.youtube.com/watch?v=ztHopE5Wnpc" }
+        ],
+        "quiz": [
+          { "question": "What is an ERD?", "options": ["Entity-Relationship Diagram", "External Relational Data", "Electronic Record Database"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "relational-concepts",
+        "name": "Relational Concepts",
+        "introduction": "The relational model organizes data into tables of rows and columns. Understanding core concepts like tables, primary keys (for unique identification), and foreign keys (to link tables) is fundamental to working with any relational database.",
+        "courses": [
+          { "name": "Relational Model Concepts - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/relational-model-in-dbms/" }
+        ],
+        "youtube": [
+          { "name": "Primary & Foreign Keys", "url": "https://www.youtube.com/watch?v=B5r8CcTUs5Y&pp=ygUecHJpbWFyeSBhbmQgZm9yZWlnbiBrZXkgaW4gc3Fs0gcJCQYKAYcqIYzv" }
+        ],
+        "quiz": [
+          { "question": "A Primary Key must be:", "options": ["Null", "Unique", "Duplicate"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "relational-dbs",
+        "name": "Relational Databases (SQL)",
+        "introduction": "Relational Database Management Systems (RDBMS) are the backbone of most applications. Getting hands-on experience with a popular, open-source system like PostgreSQL or MySQL is a critical step in applying your SQL and data modeling skills.",
+        "courses": [
+          { "name": "PostgreSQL Tutorial", "url": "https://www.postgresqltutorial.com/" }
+        ],
+        "youtube": [
+          { "name": "PostgreSQL Full Course", "url": "https://www.youtube.com/watch?v=qw--VYLpxG4&pp=ygUWcG9zdGdyZXNxbCBmdWxsIGNvdXJzZQ%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "Which of these is a Relational Database?", "options": ["MongoDB", "PostgreSQL", "Redis"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "nosql-dbs",
+        "name": "NoSQL Databases",
+        "introduction": "NoSQL databases are built for flexibility and scale. They handle unstructured data like documents (MongoDB) or key-value pairs (Redis), making them ideal for big data and real-time applications where relational models are too rigid.",
+        "courses": [
+          { "name": "MongoDB University", "url": "https://learn.mongodb.com/" },
+          { "name": "Redis University", "url": "https://redis.com/university/" }
+        ],
+        "youtube": [
+          { "name": "What is NoSQL?", "url": "https://www.youtube.com/watch?v=xQnIN9bW0og" }
+        ],
+        "quiz": [
+          { "question": "MongoDB stores data as:", "options": ["Tables", "Documents", "Graphs"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "indexing-perf",
+        "name": "Indexing",
+        "introduction": "A database index is a data structure that dramatically improves the speed of data retrieval operations. Understanding how to create and use indexes is the most critical skill for optimizing database performance and preventing slow queries.",
+        "courses": [
+          { "name": "Use The Index, Luke: A Guide to Database Performance", "url": "https://use-the-index-luke.com/" }
+        ],
+        "youtube": [
+          { "name": "Database Indexing Explained", "url": "https://www.youtube.com/watch?v=BIlFTFrEFOI&pp=ygUbZGF0YWJhc2UgaW5kZXhpbmcgZXhwbGFpbmVk" }
+        ],
+        "quiz": [
+          { "question": "What is the main benefit of an index?", "options": ["Faster data retrieval", "Less storage space", "Better security"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "transactions-concurrency",
+        "name": "Transactions & Concurrency",
+        "introduction": "Transactions ensure data integrity by bundling multiple operations into a single, all-or-nothing unit. Understanding ACID properties (Atomicity, Consistency, Isolation, Durability) is key to handling simultaneous operations without corrupting data.",
+        "courses": [
+          { "name": "ACID Properties in DBMS - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/acid-properties-in-dbms/" }
+        ],
+        "youtube": [
+          { "name": "Database Transactions (ACID)", "url": "https://www.youtube.com/watch?v=wHUOeXbZCYA&pp=ygUZZGF0YWJhc2UgdHJhbnNhY3Rpb24gYWNpZA%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "What does the 'A' in ACID stand for?", "options": ["Atomicity", "Availability", "Authorization"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "backup-recovery",
+        "name": "Backup & Recovery",
+        "introduction": "Backup and recovery are critical administrative tasks for disaster preparedness. This involves learning strategies for creating regular data backups (e.g., full, incremental) and knowing the procedures to restore the database from a backup in case of failure.",
+        "courses": [
+          { "name": "Database Backup and Recovery Best Practices", "url": "https://n2ws.com/blog/database-backup" }
+        ],
+        "youtube": [
+          { "name": "Backup and Recovery Explained", "url": "https://www.youtube.com/watch?v=2xU4yHTjqo8&list=PL3Hc8S1SG2AQsK9HuZd1AGV_mxv5i1Vav" }
+        ],
+        "quiz": [
+          { "question": "Which backup type copies all data?", "options": ["Incremental", "Differential", "Full"], "answer": 2 }
+        ]
+      }
+    ]
+  },
+  "datascience": {
+    "title": "Data Science",
+    "tools": [
+      {
+        "id": "python-ds",
+        "name": "Python (Pandas, NumPy)",
+        "introduction": "Python is the dominant language in data science, thanks to powerful libraries like Pandas for data manipulation and analysis, and NumPy for numerical computation. These tools are essential for any data scientist.",
+        "courses": [
+          { "name": "Kaggle: Pandas Course", "url": "https://www.kaggle.com/learn/pandas" },
+          { "name": "NumPy Tutorial - W3Schools", "url": "https://www.w3schools.com/python/numpy_intro.asp" }
+        ],
+        "youtube": [
+          { "name": "Python for Data Science - Course for Beginners", "url": "https://www.youtube.com/watch?v=LHBE6Q9XlzI" },
+          { "name": "NumPy Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=QUT1VHiLmmI" }
+        ],
+        "quiz": [
+          { "question": "Which library is used for data manipulation?", "options": ["Pandas", "Flask", "React"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "data-wrangling",
+        "name": "Data Wrangling & Cleaning",
+        "introduction": "Data wrangling is the process of cleaning, structuring, and enriching raw data into a desired format. It's often said that data scientists spend 80% of their time on this crucial step to ensure data quality.",
+        "courses": [
+          { "name": "Data Cleaning - Kaggle", "url": "https://www.kaggle.com/learn/data-cleaning" }
+        ],
+        "youtube": [
+          { "name": "What is Data Wrangling?", "url": "https://www.youtube.com/watch?v=sJjzrRN7voE&pp=ygUWd2hhdCBpcyBkYXRhIHdyYW5nbGluZw%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "Data wrangling involves:", "options": ["Cleaning and structuring data", "Deleting all data", "Ignoring errors"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "data-visualization",
+        "name": "Data Visualization",
+        "introduction": "Data visualization is the art of representing data graphically. Using libraries like Matplotlib and Seaborn, you can create charts and graphs to uncover trends, patterns, and insights that aren't obvious in raw data.",
+        "courses": [
+          { "name": "Data Visualization - Kaggle", "url": "https://www.kaggle.com/learn/data-visualization" }
+        ],
+        "youtube": [
+          { "name": "Python Matplotlib Tutorial", "url": "https://www.youtube.com/watch?v=3Xc3CA655Y4" }
+        ],
+        "quiz": [
+          { "question": "Which library is used for visualization?", "options": ["Matplotlib", "Numpy", "Requests"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "stats-prob",
+        "name": "Statistics & Probability",
+        "introduction": "Statistics and probability are the mathematical foundation of data science. They are essential for making inferences, understanding data distributions, and quantifying uncertainty in your models and conclusions.",
+        "courses": [
+          { "name": "Khan Academy: Statistics and probability", "url": "https://www.khanacademy.org/math/statistics-probability" }
+        ],
+        "youtube": [
+          { "name": "Full Course -Statistics", "url": "https://www.youtube.com/watch?v=LZzq1zSL1bs&pp=ygUbc3RhdGlzdGljcyBmb3IgZGF0YSBzY2llbmNl" }
+        ],
+        "quiz": [
+          { "question": "The middle value in a sorted dataset is the:", "options": ["Mean", "Median", "Mode"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "ml-concepts",
+        "name": "Machine Learning Concepts",
+        "introduction": "This involves learning the theory behind various ML models, such as linear regression for prediction, logistic regression for classification, and k-means for clustering. Understanding these concepts is key to choosing the right model for a problem.",
+        "courses": [
+          { "name": "Machine Learning by W3schools", "url": "https://www.w3schools.com/python/python_ml_getting_started.asp" }
+        ],
+        "youtube": [
+          { "name": "Machine Learning for Everybody", "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg" }
+        ],
+        "quiz": [
+          { "question": "Which is a type of Machine Learning?", "options": ["Supervised Learning", "HTML", "CSS"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "feature-engineering",
+        "name": "Feature Engineering",
+        "introduction": "Feature engineering is the process of using domain knowledge to create features that make machine learning algorithms work better. It's a creative process that can have a huge impact on the performance of your models.",
+        "courses": [
+          { "name": "Feature Engineering - Kaggle", "url": "https://www.kaggle.com/learn/feature-engineering" }
+        ],
+        "youtube": [
+          { "name": "What is Feature Engineering?", "url": "https://www.youtube.com/watch?v=Bg3CjiJ67Cc&pp=ygUTZmVhdHVyZSBlbmdpbmVlcmluZw%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "Feature engineering uses domain knowledge to:", "options": ["Create new features", "Delete the database", "Write documentation"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "big-data-tech",
+        "name": "Big Data Technologies",
+        "introduction": "When data becomes too large to handle on a single machine, you need big data technologies. Tools like Apache Spark allow for distributed data processing, enabling you to analyze massive datasets efficiently.",
+        "courses": [
+          { "name": "Introduction to Apache Spark", "url": "https://spark.apache.org/" }
+        ],
+        "youtube": [
+          { "name": "Spark Tutorial | Spark For Beginners", "url": "https://www.youtube.com/watch?v=ymtq8yjmD9I&pp=ygUMYXBhY2hlIHNwYXJr" }
+        ],
+        "quiz": [
+          { "question": "Apache Spark is used for:", "options": ["Web hosting", "Distributed data processing", "Image editing"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "model-deployment",
+        "name": "Model Deployment",
+        "introduction": "A machine learning model is only useful if it can be put into production. This involves deploying your model as an API (using a framework like Flask) so that it can make predictions on new, live data.",
+        "courses": [
+          { "name": "Deploying Machine Learning Models", "url": "https://www.freecodecamp.org/news/deploy-your-machine-learning-models-for-free/" }
+        ],
+        "youtube": [
+          { "name": "Deploy a Machine Learning Model to the Cloud", "url": "https://www.youtube.com/watch?v=vA0C0k72-b4&pp=ygUdZGVwbG95IG1hY2hpbmUgbGVhcm5pbmcgbW9kZWw%3D" }
+        ],
+        "quiz": [
+          { "question": "Model deployment makes the model available for:", "options": ["Training", "Predictions", "Debugging"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "data-storytelling",
+        "name": "Storytelling with Data",
+        "introduction": "Data storytelling is the ability to communicate insights from data effectively. It's about combining data, visuals, and narrative to create a compelling story that drives action and influences decision-making.",
+        "courses": [
+          { "name": "Storytelling with Data", "url": "https://www.storytellingwithdata.com/blog" }
+        ],
+        "youtube": [
+          { "name": "How to Tell a Story with Data", "url": "https://www.youtube.com/watch?v=Hfx1X9WSGYQ&pp=ygUWc3Rvcnl0ZWxsaW5nIHdpdGggZGF0YdIHCQkGCgGHKiGM7w%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "Data storytelling combines data with:", "options": ["Narrative and visuals", "Code only", "Raw numbers"], "answer": 0 }
+        ]
+      }
+    ]
+  },
+  "machinelearning": {
+    "title": "Machine Learning",
+    "tools": [
+      {
+        "id": "ml-math",
+        "name": "Core Mathematics",
+        "introduction": "A strong foundation in mathematics is crucial for understanding how ML algorithms work. Key areas include Linear Algebra (for data structures), Calculus (for optimization), and Probability & Statistics (for modeling uncertainty).",
+        "courses": [
+          { "name": "Khan Academy: Linear Algebra", "url": "https://www.khanacademy.org/math/linear-algebra" },
+          { "name": "Khan Academy: Multivariable Calculus", "url": "https://www.khanacademy.org/math/multivariable-calculus" }
+        ],
+        "youtube": [
+          { "name": "The Essence of Linear Algebra", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" }
+        ],
+        "quiz": [
+          { "question": "Which field is essential for understanding data structures in ML?", "options": ["Linear Algebra", "History", "Biology"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "python-for-ml",
+        "name": "Python for ML",
+        "introduction": "Python is the language of machine learning. Mastering its core data science libraries is essential. This includes NumPy for numerical operations, Pandas for data manipulation, and Scikit-learn for implementing ML models.",
+        "courses": [
+          { "name": "Scikit-learn User Guide", "url": "https://scikit-learn.org/stable/user_guide.html" }
+        ],
+        "youtube": [
+          { "name": "Python for Machine Learning - Full Course", "url": "https://www.youtube.com/watch?v=Q5JyawS8f5Q" }
+        ],
+        "quiz": [
+          { "question": "Which library is standard for implementing ML models?", "options": ["Scikit-learn", "React", "Django"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "data-preprocessing",
+        "name": "Data Preprocessing",
+        "introduction": "Raw data is rarely ready for modeling. Data preprocessing involves cleaning data, handling missing values, encoding categorical variables, and scaling features to prepare the data for a machine learning algorithm.",
+        "courses": [
+          { "name": "Scikit-learn: Preprocessing data", "url": "https://scikit-learn.org/stable/modules/preprocessing.html" }
+        ],
+        "youtube": [
+          { "name": "Data Preprocessing for Machine Learning", "url": "https://www.youtube.com/watch?v=1jIv22DDEgc&list=PLg8h8Ej1e8l2u2Hdt2EIX86SFJpgvUUs3" }
+        ],
+        "quiz": [
+          { "question": "Scaling features is part of:", "options": ["Data Preprocessing", "Model Deployment", "Data Visualization"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "supervised-learning",
+        "name": "Supervised Learning",
+        "introduction": "Supervised learning is where you train a model on labeled data. This includes regression tasks (predicting a continuous value, like a price) and classification tasks (predicting a category, like 'spam' or 'not spam').",
+        "courses": [
+          { "name": "Supervised Learning - Coursera", "url": "https://www.coursera.org/learn/supervised-machine-learning-regression-and-classification" }
+        ],
+        "youtube": [
+          { "name": "Supervised Learning Algorithms", "url": "https://www.youtube.com/watch?v=E0Hmnixke2g&pp=ygUec3VwZXJ2aXNlZCBsZWFybmluZyBhbGdvcml0aG1z" }
+        ],
+        "quiz": [
+          { "question": "Supervised learning uses:", "options": ["Labeled data", "Unlabeled data", "No data"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "unsupervised-learning",
+        "name": "Unsupervised Learning",
+        "introduction": "Unsupervised learning deals with unlabeled data, finding hidden patterns or structures. Key techniques include clustering (grouping similar data points together with K-Means) and dimensionality reduction (reducing variables with PCA).",
+        "courses": [
+          { "name": "Unsupervised Learning - DataCamp", "url": "https://www.datacamp.com/courses/unsupervised-learning-in-python?utm_cid=22816457649&utm_aid=184279705873&utm_campaign=250722_1-ps-other~dsa~generic-p2_2-b2c_3-emea_4-prc_5-na_6-na_7-le_8-pdsh-go_9-nb-e_10-na_11-na&utm_loc=1029479-&utm_mtd=-c&utm_kw=&utm_source=google&utm_medium=paid_search&utm_content=ps-other~emea-en~dsa~generic~courses-python&gad_source=1&gad_campaignid=22816457649&gbraid=0AAAAADQ9WsFkLQOCW7ad16kY6I4w1jBus&gclid=CjwKCAjw6vHHBhBwEiwAq4zvA-Fn1O6S6MddhfV6fQJNROUFNGfWHd-tY3YOkxKSRgnITCWWxAKG3BoCZWwQAvD_BwE" }
+        ],
+        "youtube": [
+          { "name": "Unsupervised Learning Explained", "url": "https://www.youtube.com/watch?v=JnnaDNNb380&pp=ygUWdW5zdXBlcnZpc2VkIGxlYXJuaW5nINIHCQkGCgGHKiGM7w%3D%3D" }
+        ],
+        "quiz": [
+          { "question": "Clustering is a type of:", "options": ["Unsupervised Learning", "Supervised Learning", "Reinforcement Learning"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "model-evaluation",
+        "name": "Model Evaluation",
+        "introduction": "How do you know if your model is good? Model evaluation involves using metrics (like accuracy, precision, recall for classification; R-squared for regression) and techniques like cross-validation to assess a model's performance.",
+        "courses": [
+          { "name": "Model evaluation in Scikit-learn", "url": "https://scikit-learn.org/stable/modules/model_evaluation.html" }
+        ],
+        "youtube": [
+          { "name": "Model Evaluation Metrics", "url": "https://www.youtube.com/watch?v=lt1YxJ_8Jzs&pp=ygUYbW9kZWwgZXZhbHVhdGlvbiBtZXRyaWNz0gcJCQYKAYcqIYzv" }
+        ],
+        "quiz": [
+          { "question": "Which metric is used for classification?", "options": ["Accuracy", "R-squared", "Mean Absolute Error"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "neural-networks-dl",
+        "name": "Neural Networks & Deep Learning",
+        "introduction": "Neural Networks, inspired by the human brain, are the foundation of deep learning. They excel at finding complex patterns in data and are used for tasks like image recognition (CNNs) and natural language processing (RNNs).",
+        "courses": [
+          { "name": "DeepLearning.AI Specialization", "url": "https://www.coursera.org/specializations/deep-learning" }
+        ],
+        "youtube": [
+          { "name": "What is a Neural Network?", "url": "https://www.youtube.com/watch?v=aircAruvnKk" }
+        ],
+        "quiz": [
+          { "question": "Neural networks are inspired by:", "options": ["The human brain", "Computer chips", "Solar systems"], "answer": 0 }
+        ]
+      },
+      {
+        "id": "nlp-cv",
+        "name": "NLP / Computer Vision",
+        "introduction": "These are major specializations in ML. Natural Language Processing (NLP) deals with text and language, while Computer Vision (CV) deals with images and video. Both heavily rely on deep learning techniques.",
+        "courses": [
+          { "name": "CS231n: Convolutional Neural Networks for Visual Recognition", "url": "https://cs231n.github.io/" }
+        ],
+        "youtube": [
+          { "name": "Natural Language Processing - Full Course", "url": "https://www.youtube.com/watch?v=X2vAabgKiuM" }
+        ],
+        "quiz": [
+          { "question": "NLP deals with:", "options": ["Images", "Human language", "Audio signals"], "answer": 1 }
+        ]
+      },
+      {
+        "id": "mlops",
+        "name": "MLOps",
+        "introduction": "MLOps (Machine Learning Operations) is a set of practices for deploying and maintaining machine learning models in production reliably and efficiently. It combines ML, DevOps, and Data Engineering to manage the complete ML lifecycle.",
+        "courses": [
+          { "name": "MLOps Specialization - Coursera", "url": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops" }
+        ],
+        "youtube": [
+          { "name": "What is MLOps?", "url": "https://www.youtube.com/watch?v=OejCJL2EC3k&pp=ygUFbWxvcHM%3D" }
+        ],
+        "quiz": [
+          { "question": "MLOps combines ML with:", "options": ["DevOps", "Graphic Design", "Marketing"], "answer": 0 }
+        ]
+      }
+    ]
+  }
+}

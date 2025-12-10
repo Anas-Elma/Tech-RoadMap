@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Development Roadmap</title>
+    <link rel="stylesheet" href="roadmap-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="roadmap-nav">
+        <a href="index.html" class="name">TechRoadmaps.</a>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="index.html#domains" class="back-link"><i class='bx bx-arrow-back'></i> Back to Domains</a>
+            <div id="auth-section"></div>
+        </div>
+    </nav>
+
+    <div class="roadmap-container">
+        <header class="roadmap-header">
+            <h1>Frontend Development Roadmap</h1>
+            <p>Your journey to becoming a Frontend Developer. This path covers everything from the basic building blocks
+                of the web to modern frameworks and tools needed to build stunning user interfaces.</p>
+        </header>
+
+        <!-- ... existing head and nav ... -->
+        <main class="roadmap-main">
+            <section class="roadmap-section">
+                <h2>Phase 1: The Foundations</h2>
+                <div class="roadmap-grid">
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=html">
+                        <h3>HTML</h3>
+                        <p>Learn the structure of web pages, semantic tags, forms, and accessibility.</p>
+                    </a>
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=css">
+                        <h3>CSS</h3>
+                        <p>Master styling, layouts with Flexbox and Grid, responsive design, and animations.</p>
+                    </a>
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=javascript">
+                        <h3>JavaScript</h3>
+                        <p>Understand the core language: variables, data types, functions, DOM manipulation, and ES6+
+                            features.</p>
+                    </a>
+                </div>
+            </section>
+            <section class="roadmap-section">
+                <h2>Phase 2: Intermediate Skills & Frameworks</h2>
+                <div class="roadmap-grid">
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=git">
+                        <h3>Version Control (Git)</h3>
+                        <p>Learn how to track changes in your code and collaborate with others using platforms like
+                            GitHub.</p>
+                    </a>
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=frameworks">
+                        <h3>Choose a Framework</h3>
+                        <p>Pick one major framework to master: React, Vue, or Angular. Learn about components, state
+                            management, and routing.</p>
+                    </a>
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=packagemanagers">
+                        <h3>Package Managers</h3>
+                        <p>Get familiar with using npm or yarn to manage project dependencies and scripts.</p>
+                    </a>
+                </div>
+            </section>
+            <section class="roadmap-section">
+                <h2>Phase 3: Advanced Concepts & Tooling</h2>
+                <div class="roadmap-grid">
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=buildtools">
+                        <h3>Build Tools</h3>
+                        <p>Understand how tools like Vite, Webpack, or Parcel bundle your code for production.</p>
+                    </a>
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=testing">
+                        <h3>Testing</h3>
+                        <p>Learn to write unit and integration tests for your components using tools like Jest or
+                            Vitest.</p>
+                    </a>
+                    <a class="roadmap-card" href="details.html?domain=frontend&tool=typescript">
+                        <h3>TypeScript</h3>
+                        <p>Add static typing to JavaScript to catch errors early and improve code quality.</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <!-- ... existing footer ... -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 TechRoadmaps By Anas Elmarihi | All Rights Reserved.</p>
+    </footer>
+
+    <!-- Login/Register Wrapper -->
+    <div class="wrapper">
+        <span class="icon-close"><i class='bx bx-x'></i></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
