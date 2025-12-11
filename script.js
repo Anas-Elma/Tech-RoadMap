@@ -315,6 +315,9 @@ function loadToolDetails(domainId, toolId) {
                     }
                 });
 
+                // Populate Practice / Compiler Section
+                setupPracticeSection(tool);
+
                 // Populate Quiz
                 const quizContainer = document.getElementById('quiz-section');
                 const quizTabBtn = document.querySelector('.tab-btn[data-tab="quiz-section"]');
@@ -453,4 +456,195 @@ function loadToolDetails(domainId, toolId) {
             }
             document.getElementById('details-container').innerHTML = `<h1>${userMessage}</h1>`;
         });
+}
+
+function setupPracticeSection(tool) {
+    // 1. Find or Create the Practice Tab Button
+    let practiceTabBtn = document.querySelector('.tab-btn[data-tab="practice-section"]');
+    const tabContainer = document.querySelector('.tab-btn').parentElement;
+    
+    if (!practiceTabBtn && tabContainer) {
+        practiceTabBtn = document.createElement('button');
+        practiceTabBtn.className = 'tab-btn';
+        practiceTabBtn.setAttribute('data-tab', 'practice-section');
+        practiceTabBtn.textContent = 'Practice';
+        
+        // Add click event listener for the new button
+        practiceTabBtn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            practiceTabBtn.classList.add('active');
+            const content = document.getElementById('practice-section');
+            if (content) content.classList.add('active');
+        });
+        
+        tabContainer.appendChild(practiceTabBtn);
+    }
+
+    // 2. Find or Create the Practice Content Area
+    let practiceContent = document.getElementById('practice-section');
+    const contentContainer = document.querySelector('.tab-content').parentElement;
+
+    if (!practiceContent && contentContainer) {
+        practiceContent = document.createElement('div');
+        practiceContent.id = 'practice-section';
+        practiceContent.className = 'tab-content';
+        contentContainer.appendChild(practiceContent);
+    }
+
+    // 3. Populate Content
+    if (practiceContent) {
+        practiceContent.innerHTML = ''; // Clear previous
+
+        if (tool.practice && tool.practice.length > 0) {
+            if (practiceTabBtn) practiceTabBtn.style.display = 'inline-block';
+
+            // Level Selector
+            const levelContainer = document.createElement('div');
+            levelContainer.className = 'level-selector';
+            levelContainer.style.marginBottom = '15px';
+
+            const editorContainer = document.createElement('div');
+            editorContainer.className = 'editor-container';
+            
+            // Render Levels
+            tool.practice.forEach((exercise, index) => {
+                const btn = document.createElement('button');
+                btn.textContent = `${exercise.level}: ${exercise.title}`;
+                btn.className = 'level-btn';
+                btn.style.marginRight = '10px';
+                btn.style.marginBottom = '10px';
+                
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#practice-section .level-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderEditor(exercise, tool.id);
+                });
+                
+                levelContainer.appendChild(btn);
+                // Activate first level by default
+                if (index === 0) btn.click();
+            });
+
+            practiceContent.appendChild(levelContainer);
+            practiceContent.appendChild(editorContainer);
+
+            function renderEditor(exercise, toolId) {
+                editorContainer.innerHTML = `
+                    <h3 style="color: #fff; margin-bottom: 10px;">${exercise.title}</h3>
+                    <p style="color: #ccc; margin-bottom: 15px;">${exercise.description}</p>
+                    <textarea id="code-editor" style="width: 100%; height: 200px; background: #1e1e1e; color: #d4d4d4; border: 1px solid #333; padding: 10px; font-family: monospace; border-radius: 5px;">${exercise.starterCode}</textarea>
+                    <div style="margin-top: 10px;">
+                        <button id="run-code-btn" type="button" class="btn-primary">Run Code <i class='bx bx-play'></i></button>
+                        ${exercise.hint ? `<button id="hint-btn" type="button" class="btn-secondary" style="margin-left: 10px; background-color: #444;">Show Hint <i class='bx bx-bulb'></i></button>` : ''}
+                        ${exercise.solution ? `<button id="solution-btn" type="button" class="btn-secondary" style="margin-left: 10px; background-color: #e74c3c;">Show Solution <i class='bx bx-check-circle'></i></button>` : ''}
+                    </div>
+                    ${exercise.hint ? `<div id="hint-box" style="display: none; margin-top: 15px; padding: 10px; background: #2d2d2d; border-left: 4px solid #f39c12; color: #ddd; font-style: italic;"><strong>Hint:</strong> ${exercise.hint}</div>` : ''}
+                    ${exercise.solution ? `<div id="solution-box" style="display: none; margin-top: 15px; padding: 10px; background: #2d2d2d; border-left: 4px solid #e74c3c; color: #ddd; font-family: monospace; white-space: pre-wrap;"><strong>Solution:</strong>\n${exercise.solution}</div>` : ''}
+                    <div id="code-output" style="margin-top: 15px; background: #000; color: #0f0; padding: 10px; border-radius: 5px; min-height: 50px; white-space: pre-wrap; font-family: monospace;"></div>
+                `;
+
+                const runBtn = editorContainer.querySelector('#run-code-btn');
+                const codeEditor = editorContainer.querySelector('#code-editor');
+                const outputDiv = editorContainer.querySelector('#code-output');
+
+                if (runBtn) {
+                    runBtn.addEventListener('click', () => {
+                        runCompiler(toolId, codeEditor.value, outputDiv);
+                    });
+                }
+
+                if (exercise.hint) {
+                    const hintBtn = editorContainer.querySelector('#hint-btn');
+                    const hintBox = editorContainer.querySelector('#hint-box');
+                    if (hintBtn && hintBox) {
+                        hintBtn.addEventListener('click', () => {
+                            const isHidden = hintBox.style.display === 'none';
+                            hintBox.style.display = isHidden ? 'block' : 'none';
+                            hintBtn.innerHTML = isHidden ? `Hide Hint <i class='bx bx-bulb'></i>` : `Show Hint <i class='bx bx-bulb'></i>`;
+                        });
+                    }
+                }
+
+                if (exercise.solution) {
+                    const solBtn = editorContainer.querySelector('#solution-btn');
+                    const solBox = editorContainer.querySelector('#solution-box');
+                    if (solBtn && solBox) {
+                        solBtn.addEventListener('click', () => {
+                            const isHidden = solBox.style.display === 'none';
+                            solBox.style.display = isHidden ? 'block' : 'none';
+                            solBtn.innerHTML = isHidden ? `Hide Solution <i class='bx bx-check-circle'></i>` : `Show Solution <i class='bx bx-check-circle'></i>`;
+                        });
+                    }
+                }
+            }
+
+        } else {
+            if (practiceTabBtn) practiceTabBtn.style.display = 'inline-block';
+            practiceContent.innerHTML = '<div style="padding: 20px; color: #fff;"><h3>Practice Area</h3><p>No practice exercises available for this tool yet. Check back later!</p></div>';
+        }
+    }
+}
+
+async function runCompiler(toolId, code, outputDiv) {
+    if (outputDiv) outputDiv.textContent = 'Running...';
+
+    // Map tool IDs to Piston API languages
+    const languageMap = {
+        'python-prog': 'python',
+        'python-ds': 'python',
+        'python-backend': 'python',
+        'python-for-ml': 'python',
+        'java-prog': 'java',
+        'cplusplus-prog': 'c++',
+        'javascript': 'javascript',
+        'nodejs': 'javascript',
+        'typescript': 'typescript',
+        'php': 'php',
+        'sql-mastery': 'sqlite3'
+    };
+
+    // 1. Handle HTML/CSS (Client-side rendering)
+    if (toolId === 'html' || toolId === 'css') {
+        if (outputDiv) outputDiv.innerHTML = ''; // Clear text
+        const iframe = document.createElement('iframe');
+        iframe.style.width = '100%';
+        iframe.style.height = '200px';
+        iframe.style.background = '#fff';
+        iframe.style.border = 'none';
+        if (outputDiv) outputDiv.appendChild(iframe);
+        
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        if (toolId === 'css') {
+            doc.write(`<style>${code}</style><h1>CSS Test</h1><p>If your CSS is correct, this text should change.</p>`);
+        } else {
+            doc.write(code);
+        }
+        doc.close();
+        return;
+    }
+
+    // 2. Handle Programming Languages via Piston API
+    const lang = languageMap[toolId];
+    if (!lang) {
+        if (outputDiv) outputDiv.textContent = 'Compiler not supported for this tool yet.';
+        return;
+    }
+
+    try {
+        const response = await fetch('https://emkc.org/api/v2/piston/execute', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                language: lang,
+                version: '*', 
+                files: [{ content: code }]
+            })
+        });
+        const result = await response.json();
+        if (outputDiv) outputDiv.textContent = result.run.output || result.message || 'No output';
+    } catch (error) {
+        if (outputDiv) outputDiv.textContent = 'Error executing code: ' + error.message;
+    }
 }
