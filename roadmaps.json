@@ -26,8 +26,43 @@
           { "question": "Which HTML element is used to draw graphics, on the fly, via scripting?", "options": ["<canvas>", "<svg>", "<paint>"], "answer": 0 }
         ],
         "practice": [
-          { "level": "Beginner", "title": "Headings", "description": "Create an H1 heading with the text 'My Website'.", "starterCode": "<!-- Write your code here -->", "hint": "Use the <h1> tag.", "solution": "<h1>My Website</h1>" },
-          { "level": "Intermediate", "title": "Buttons", "description": "Create a button that says 'Click Me'.", "starterCode": "<!-- Write your code here -->", "hint": "Use the <button> tag.", "solution": "<button>Click Me</button>" }
+          { "level": "Level 1", "title": "Headings", "description": "Create an H1 heading with the text 'Hello'.", "starterCode": "<!-- Write your code here -->", "hint": "<h1>Hello</h1>", "solution": "<h1>Hello</h1>" }
+        ],
+        "practice_data": [
+          { "level": "Level 1", "title": "Headings", "description": "Create an H1 heading with the text 'Hello'.", "starterCode": "<!-- Write your code here -->", "hint": "<h1>Hello</h1>", "solution": "<h1>Hello</h1>" },
+          { "level": "Level 2", "title": "Paragraphs", "description": "Create a paragraph with text 'I am learning'.", "starterCode": "<!-- Write your code here -->", "hint": "<p>I am learning</p>", "solution": "<p>I am learning</p>" },
+          { "level": "Level 3", "title": "Subheadings", "description": "Create an H2 heading saying 'Subtopic'.", "starterCode": "<!-- Write your code here -->", "hint": "<h2>Subtopic</h2>", "solution": "<h2>Subtopic</h2>" },
+          { "level": "Level 4", "title": "Comments", "description": "Add a comment saying 'TODO'.", "starterCode": "<!-- Write your code here -->", "hint": "<!-- TODO -->", "solution": "<!-- TODO -->" },
+          { "level": "Level 5", "title": "Bold Text", "description": "Make the text 'Important' bold using the strong tag.", "starterCode": "<!-- Write your code here -->", "hint": "<strong>Important</strong>", "solution": "<strong>Important</strong>" },
+          { "level": "Level 6", "title": "Italic Text", "description": "Make the text 'Emphasis' italic using the em tag.", "starterCode": "<!-- Write your code here -->", "hint": "<em>Emphasis</em>", "solution": "<em>Emphasis</em>" },
+          { "level": "Level 7", "title": "Line Break", "description": "Insert a line break between 'Line 1' and 'Line 2'.", "starterCode": "Line 1 Line 2", "hint": "Line 1<br>Line 2", "solution": "Line 1<br>Line 2" },
+          { "level": "Level 8", "title": "Horizontal Rule", "description": "Add a horizontal line.", "starterCode": "<!-- Write your code here -->", "hint": "<hr>", "solution": "<hr>" },
+          { "level": "Level 9", "title": "Links", "description": "Create a link to 'google.com' with text 'Google'.", "starterCode": "<!-- Write your code here -->", "hint": "<a href='https://google.com'>Google</a>", "solution": "<a href='https://google.com'>Google</a>" },
+          { "level": "Level 10", "title": "Images", "description": "Add an image with src 'logo.png'.", "starterCode": "<!-- Write your code here -->", "hint": "<img src='logo.png'>", "solution": "<img src='logo.png'>" },
+          { "level": "Level 11", "title": "Alt Text", "description": "Add alt text 'Logo' to the image.", "starterCode": "<img src='logo.png'>", "hint": "alt='Logo'", "solution": "<img src='logo.png' alt='Logo'>" },
+          { "level": "Level 12", "title": "Unordered List", "description": "Create a bulleted list (ul).", "starterCode": "<!-- Write your code here -->", "hint": "<ul></ul>", "solution": "<ul></ul>" },
+          { "level": "Level 13", "title": "List Items", "description": "Add an item 'Milk' to the list.", "starterCode": "<ul></ul>", "hint": "<li>Milk</li>", "solution": "<ul><li>Milk</li></ul>" },
+          { "level": "Level 14", "title": "Ordered List", "description": "Create a numbered list (ol).", "starterCode": "<!-- Write your code here -->", "hint": "<ol></ol>", "solution": "<ol></ol>" },
+          { "level": "Level 15", "title": "Buttons", "description": "Create a button that says 'Click Me'.", "starterCode": "<!-- Write your code here -->", "hint": "<button>Click Me</button>", "solution": "<button>Click Me</button>" },
+          { "level": "Level 16", "title": "Text Input", "description": "Create a text input field.", "starterCode": "<!-- Write your code here -->", "hint": "<input type='text'>", "solution": "<input type='text'>" },
+          { "level": "Level 17", "title": "Placeholder", "description": "Add placeholder 'Name' to the input.", "starterCode": "<input type='text'>", "hint": "placeholder='Name'", "solution": "<input type='text' placeholder='Name'>" },
+          { "level": "Level 18", "title": "Password Input", "description": "Create a password input field.", "starterCode": "<!-- Write your code here -->", "hint": "<input type='password'>", "solution": "<input type='password'>" },
+          { "level": "Level 19", "title": "Labels", "description": "Create a label for 'Email'.", "starterCode": "<!-- Write your code here -->", "hint": "<label>Email</label>", "solution": "<label>Email</label>" },
+          { "level": "Level 20", "title": "Checkbox", "description": "Create a checkbox input.", "starterCode": "<!-- Write your code here -->", "hint": "<input type='checkbox'>", "solution": "<input type='checkbox'>" },
+          { "level": "Level 21", "title": "Radio Button", "description": "Create a radio button.", "starterCode": "<!-- Write your code here -->", "hint": "<input type='radio'>", "solution": "<input type='radio'>" },
+          { "level": "Level 22", "title": "Textarea", "description": "Create a multi-line text input.", "starterCode": "<!-- Write your code here -->", "hint": "<textarea></textarea>", "solution": "<textarea></textarea>" },
+          { "level": "Level 23", "title": "Div Container", "description": "Create a div element.", "starterCode": "<!-- Write your code here -->", "hint": "<div></div>", "solution": "<div></div>" },
+          { "level": "Level 24", "title": "Span", "description": "Create a span element with text 'Word'.", "starterCode": "<!-- Write your code here -->", "hint": "<span>Word</span>", "solution": "<span>Word</span>" },
+          { "level": "Level 25", "title": "Table", "description": "Create a table element.", "starterCode": "<!-- Write your code here -->", "hint": "<table></table>", "solution": "<table></table>" },
+          { "level": "Level 26", "title": "Table Row", "description": "Add a row (tr) to the table.", "starterCode": "<table></table>", "hint": "<tr></tr>", "solution": "<table><tr></tr></table>" },
+          { "level": "Level 27", "title": "Table Header", "description": "Add a header cell (th) 'Name'.", "starterCode": "<table><tr></tr></table>", "hint": "<th>Name</th>", "solution": "<table><tr><th>Name</th></tr></table>" },
+          { "level": "Level 28", "title": "Table Data", "description": "Add a data cell (td) 'John'.", "starterCode": "<table><tr></tr></table>", "hint": "<td>John</td>", "solution": "<table><tr><td>John</td></tr></table>" },
+          { "level": "Level 29", "title": "Dropdown", "description": "Create a select dropdown.", "starterCode": "<!-- Write your code here -->", "hint": "<select></select>", "solution": "<select></select>" },
+          { "level": "Level 30", "title": "Form", "description": "Wrap an input in a form tag.", "starterCode": "<input>", "hint": "<form><input></form>", "solution": "<form><input></form>" }
+        ],
+        "projects": [
+          { "title": "Personal Portfolio", "description": "Build a simple personal portfolio page using semantic HTML tags like <header>, <section>, and <footer>.", "difficulty": "Beginner" },
+          { "title": "Restaurant Menu", "description": "Create a restaurant menu using HTML lists and tables.", "difficulty": "Beginner" }
         ]
       },
       { 
@@ -54,8 +89,43 @@
           { "question": "Which query is used for responsive design?", "options": ["@media", "@screen", "@responsive"], "answer": 0 }
         ],
         "practice": [
-          { "level": "Beginner", "title": "Text Color", "description": "Make the h1 element blue.", "starterCode": "h1 {\n  /* Write your code here */\n}", "hint": "Use the 'color' property.", "solution": "h1 {\n  color: blue;\n}" },
-          { "level": "Intermediate", "title": "Backgrounds", "description": "Set the background color of the body to lightgray.", "starterCode": "body {\n  /* Write your code here */\n}", "hint": "Use the 'background-color' property.", "solution": "body {\n  background-color: lightgray;\n}" }
+          { "level": "Level 1", "title": "Text Color", "description": "Make the h1 element red.", "starterCode": "h1 {}", "hint": "color: red;", "solution": "h1 { color: red; }" }
+        ],
+        "practice_data": [
+          { "level": "Level 1", "title": "Text Color", "description": "Make the h1 element red.", "starterCode": "h1 {}", "hint": "color: red;", "solution": "h1 { color: red; }" },
+          { "level": "Level 2", "title": "Hex Colors", "description": "Set color to #00ff00.", "starterCode": "p {}", "hint": "color: #00ff00;", "solution": "p { color: #00ff00; }" },
+          { "level": "Level 3", "title": "Background Color", "description": "Set background to blue.", "starterCode": "div {}", "hint": "background-color: blue;", "solution": "div { background-color: blue; }" },
+          { "level": "Level 4", "title": "Font Size", "description": "Set font size to 20px.", "starterCode": "p {}", "hint": "font-size: 20px;", "solution": "p { font-size: 20px; }" },
+          { "level": "Level 5", "title": "Font Family", "description": "Set font to Arial.", "starterCode": "body {}", "hint": "font-family: Arial;", "solution": "body { font-family: Arial; }" },
+          { "level": "Level 6", "title": "Text Align", "description": "Center the text.", "starterCode": "h1 {}", "hint": "text-align: center;", "solution": "h1 { text-align: center; }" },
+          { "level": "Level 7", "title": "Bold Text", "description": "Make text bold.", "starterCode": "span {}", "hint": "font-weight: bold;", "solution": "span { font-weight: bold; }" },
+          { "level": "Level 8", "title": "Underline", "description": "Underline the text.", "starterCode": "a {}", "hint": "text-decoration: underline;", "solution": "a { text-decoration: underline; }" },
+          { "level": "Level 9", "title": "Width", "description": "Set width to 100px.", "starterCode": "div {}", "hint": "width: 100px;", "solution": "div { width: 100px; }" },
+          { "level": "Level 10", "title": "Height", "description": "Set height to 50px.", "starterCode": "div {}", "hint": "height: 50px;", "solution": "div { height: 50px; }" },
+          { "level": "Level 11", "title": "Border Style", "description": "Add a solid border.", "starterCode": "div {}", "hint": "border-style: solid;", "solution": "div { border-style: solid; }" },
+          { "level": "Level 12", "title": "Border Width", "description": "Set border width to 2px.", "starterCode": "div {}", "hint": "border-width: 2px;", "solution": "div { border-width: 2px; }" },
+          { "level": "Level 13", "title": "Border Color", "description": "Set border color to black.", "starterCode": "div {}", "hint": "border-color: black;", "solution": "div { border-color: black; }" },
+          { "level": "Level 14", "title": "Border Radius", "description": "Round corners by 5px.", "starterCode": "button {}", "hint": "border-radius: 5px;", "solution": "button { border-radius: 5px; }" },
+          { "level": "Level 15", "title": "Padding", "description": "Add 10px padding inside.", "starterCode": "div {}", "hint": "padding: 10px;", "solution": "div { padding: 10px; }" },
+          { "level": "Level 16", "title": "Padding Top", "description": "Add 20px padding to top only.", "starterCode": "div {}", "hint": "padding-top: 20px;", "solution": "div { padding-top: 20px; }" },
+          { "level": "Level 17", "title": "Margin", "description": "Add 15px margin outside.", "starterCode": "div {}", "hint": "margin: 15px;", "solution": "div { margin: 15px; }" },
+          { "level": "Level 18", "title": "Center Block", "description": "Center a block element horizontally.", "starterCode": "div { width: 50%; }", "hint": "margin: auto;", "solution": "div { width: 50%; margin: auto; }" },
+          { "level": "Level 19", "title": "Display Block", "description": "Make a span behave like a block.", "starterCode": "span {}", "hint": "display: block;", "solution": "span { display: block; }" },
+          { "level": "Level 20", "title": "Display Inline", "description": "Make a div behave like text.", "starterCode": "div {}", "hint": "display: inline;", "solution": "div { display: inline; }" },
+          { "level": "Level 21", "title": "Hide Element", "description": "Hide the element completely.", "starterCode": "div {}", "hint": "display: none;", "solution": "div { display: none; }" },
+          { "level": "Level 22", "title": "Opacity", "description": "Make element 50% transparent.", "starterCode": "img {}", "hint": "opacity: 0.5;", "solution": "img { opacity: 0.5; }" },
+          { "level": "Level 23", "title": "Cursor", "description": "Change cursor to pointer on hover.", "starterCode": "button {}", "hint": "cursor: pointer;", "solution": "button { cursor: pointer; }" },
+          { "level": "Level 24", "title": "Relative Position", "description": "Set position to relative.", "starterCode": "div {}", "hint": "position: relative;", "solution": "div { position: relative; }" },
+          { "level": "Level 25", "title": "Absolute Position", "description": "Set position to absolute.", "starterCode": "div {}", "hint": "position: absolute;", "solution": "div { position: absolute; }" },
+          { "level": "Level 26", "title": "Z-Index", "description": "Bring element to front (index 10).", "starterCode": "div {}", "hint": "z-index: 10;", "solution": "div { z-index: 10; }" },
+          { "level": "Level 27", "title": "Float", "description": "Float element to the right.", "starterCode": "img {}", "hint": "float: right;", "solution": "img { float: right; }" },
+          { "level": "Level 28", "title": "Flexbox", "description": "Enable flexbox layout.", "starterCode": "div {}", "hint": "display: flex;", "solution": "div { display: flex; }" },
+          { "level": "Level 29", "title": "Justify Content", "description": "Center flex items horizontally.", "starterCode": "div { display: flex; }", "hint": "justify-content: center;", "solution": "div { display: flex; justify-content: center; }" },
+          { "level": "Level 30", "title": "Align Items", "description": "Center flex items vertically.", "starterCode": "div { display: flex; }", "hint": "align-items: center;", "solution": "div { display: flex; align-items: center; }" }
+        ],
+        "projects": [
+          { "title": "Responsive Landing Page", "description": "Design a responsive landing page with a navigation bar, hero section, and footer using Flexbox or Grid.", "difficulty": "Intermediate" },
+          { "title": "Card Gallery", "description": "Create a gallery of image cards that scale and arrange themselves nicely on different screen sizes.", "difficulty": "Intermediate" }
         ]
       },
       { 
@@ -82,9 +152,39 @@
           { "question": "Is JavaScript case-sensitive?", "options": ["Yes", "No", "Only in functions"], "answer": 0 }
         ],
         "practice": [
-          { "level": "Beginner", "title": "Hello World", "description": "Write a program that logs 'Hello World' to the console.", "starterCode": "// Write your code here", "hint": "Use console.log('Hello World');", "solution": "console.log('Hello World');" },
-          { "level": "Beginner", "title": "Variables", "description": "Create a variable named 'x', assign it the value 10, and print it.", "starterCode": "// Write your code here", "hint": "Use 'let x = 10;' then 'console.log(x);'.", "solution": "let x = 10;\nconsole.log(x);" },
-          { "level": "Intermediate", "title": "Functions", "description": "Write a function named 'greet' that takes a name as an argument and returns 'Hello ' + name.", "starterCode": "function greet(name) {\n  // Your code here\n}\nconsole.log(greet('Alice'));", "hint": "Return the string 'Hello ' concatenated with the name variable.", "solution": "function greet(name) {\n  return 'Hello ' + name;\n}\nconsole.log(greet('Alice'));" }
+          { "level": "Level 1", "title": "Hello World", "description": "Write a program that logs 'Hello World' to the console.", "starterCode": "// Write your code here", "hint": "Use console.log('Hello World');", "solution": "console.log('Hello World');" }
+        ],
+        "practice_data": [
+          { "level": "Level 1", "title": "Hello World", "description": "Write a program that logs 'Hello World' to the console.", "starterCode": "// Write your code here", "hint": "Use console.log('Hello World');", "solution": "console.log('Hello World');" },
+          { "level": "Level 2", "title": "Variables", "description": "Create a variable named 'x', assign it the value 10.", "starterCode": "// Write your code here", "hint": "Use 'let x = 10;'", "solution": "let x = 10;" },
+          { "level": "Level 3", "title": "Constants", "description": "Create a constant named 'PI' with value 3.14.", "starterCode": "// Write your code here", "hint": "Use 'const PI = 3.14;'", "solution": "const PI = 3.14;" },
+          { "level": "Level 4", "title": "Arithmetic", "description": "Calculate 10 plus 5 and log the result.", "starterCode": "// Write your code here", "hint": "console.log(10 + 5);", "solution": "console.log(10 + 5);" },
+          { "level": "Level 5", "title": "Strings", "description": "Create a variable 'name' with your name as a string.", "starterCode": "// Write your code here", "hint": "let name = 'Alice';", "solution": "let name = 'Alice';" },
+          { "level": "Level 6", "title": "Concatenation", "description": "Combine 'Hello' and 'World' into one string.", "starterCode": "// Write your code here", "hint": "'Hello' + ' ' + 'World'", "solution": "console.log('Hello ' + 'World');" },
+          { "level": "Level 7", "title": "String Length", "description": "Log the length of the string 'JavaScript'.", "starterCode": "// Write your code here", "hint": "'JavaScript'.length", "solution": "console.log('JavaScript'.length);" },
+          { "level": "Level 8", "title": "Booleans", "description": "Create a variable 'isCoding' and set it to true.", "starterCode": "// Write your code here", "hint": "let isCoding = true;", "solution": "let isCoding = true;" },
+          { "level": "Level 9", "title": "Comparison", "description": "Check if 10 is greater than 5 and log the result.", "starterCode": "// Write your code here", "hint": "console.log(10 > 5);", "solution": "console.log(10 > 5);" },
+          { "level": "Level 10", "title": "Equality", "description": "Check if 5 is equal to '5' using strict equality.", "starterCode": "// Write your code here", "hint": "console.log(5 === '5');", "solution": "console.log(5 === '5');" },
+          { "level": "Level 11", "title": "If Statement", "description": "Write an if statement that checks if x > 0.", "starterCode": "let x = 10;\n// Write if statement", "hint": "if (x > 0) { ... }", "solution": "if (x > 0) { console.log('Positive'); }" },
+          { "level": "Level 12", "title": "Else", "description": "Add an else block to the if statement.", "starterCode": "let x = -5;\nif (x > 0) {\n  console.log('Positive');\n} // Add else", "hint": "else { ... }", "solution": "if (x > 0) { console.log('Positive'); } else { console.log('Non-positive'); }" },
+          { "level": "Level 13", "title": "Arrays", "description": "Create an array named 'colors' with 'red' and 'blue'.", "starterCode": "// Write your code here", "hint": "let colors = ['red', 'blue'];", "solution": "let colors = ['red', 'blue'];" },
+          { "level": "Level 14", "title": "Array Access", "description": "Log the first element of the 'colors' array.", "starterCode": "let colors = ['red', 'blue'];\n// Write your code here", "hint": "colors[0]", "solution": "console.log(colors[0]);" },
+          { "level": "Level 15", "title": "Array Push", "description": "Add 'green' to the end of the 'colors' array.", "starterCode": "let colors = ['red', 'blue'];\n// Write your code here", "hint": "colors.push('green');", "solution": "colors.push('green');" },
+          { "level": "Level 16", "title": "For Loop", "description": "Write a loop that counts from 0 to 4.", "starterCode": "// Write your code here", "hint": "for(let i=0; i<5; i++)", "solution": "for(let i=0; i<5; i++) { console.log(i); }" },
+          { "level": "Level 17", "title": "While Loop", "description": "Write a while loop that runs while i < 5.", "starterCode": "let i = 0;\n// Write loop", "hint": "while(i < 5)", "solution": "while(i < 5) { console.log(i); i++; }" },
+          { "level": "Level 18", "title": "Functions", "description": "Define a function named 'greet'.", "starterCode": "// Write your code here", "hint": "function greet() {}", "solution": "function greet() { console.log('Hello'); }" },
+          { "level": "Level 19", "title": "Parameters", "description": "Update 'greet' to accept a 'name' parameter.", "starterCode": "// Write your code here", "hint": "function greet(name)", "solution": "function greet(name) { console.log('Hello ' + name); }" },
+          { "level": "Level 20", "title": "Return", "description": "Create a function 'add' that returns the sum of two numbers.", "starterCode": "// Write your code here", "hint": "return a + b;", "solution": "function add(a, b) { return a + b; }" },
+          { "level": "Level 21", "title": "Objects", "description": "Create an object 'person' with a 'name' property.", "starterCode": "// Write your code here", "hint": "let person = { name: 'Alice' };", "solution": "let person = { name: 'Alice' };" },
+          { "level": "Level 22", "title": "Dot Notation", "description": "Access the 'name' property of 'person'.", "starterCode": "let person = { name: 'Alice' };\n// Write your code here", "hint": "person.name", "solution": "console.log(person.name);" },
+          { "level": "Level 23", "title": "Arrow Functions", "description": "Rewrite 'add' as an arrow function.", "starterCode": "// Write your code here", "hint": "const add = (a, b) => ...", "solution": "const add = (a, b) => a + b;" },
+          { "level": "Level 24", "title": "Template Literals", "description": "Use backticks to log 'Hello Alice'.", "starterCode": "let name = 'Alice';\n// Write your code here", "hint": "`Hello ${name}`", "solution": "console.log(`Hello ${name}`);" },
+          { "level": "Level 25", "title": "Map", "description": "Use .map() to double numbers in an array.", "starterCode": "let nums = [1, 2, 3];\n// Write your code here", "hint": "nums.map(n => n * 2)", "solution": "let doubled = nums.map(n => n * 2);" },
+          { "level": "Level 26", "title": "Filter", "description": "Use .filter() to keep numbers greater than 10.", "starterCode": "let nums = [5, 15, 20];\n// Write your code here", "hint": "nums.filter(n => n > 10)", "solution": "let big = nums.filter(n => n > 10);" },
+          { "level": "Level 27", "title": "Destructuring", "description": "Extract 'id' from object {id: 1} using destructuring.", "starterCode": "let obj = {id: 1};\n// Write your code here", "hint": "const { id } = obj;", "solution": "const { id } = obj;" },
+          { "level": "Level 28", "title": "Spread", "description": "Combine two arrays using the spread operator.", "starterCode": "let a = [1]; let b = [2];\n// Write your code here", "hint": "[...a, ...b]", "solution": "let c = [...a, ...b];" },
+          { "level": "Level 29", "title": "Try/Catch", "description": "Wrap code in a try...catch block.", "starterCode": "// Write your code here", "hint": "try { ... } catch(e) { ... }", "solution": "try { error(); } catch(e) { console.log(e); }" },
+          { "level": "Level 30", "title": "Classes", "description": "Define a class named 'User'.", "starterCode": "// Write your code here", "hint": "class User {}", "solution": "class User {}" }
         ] 
       },
       { "id": "git", "name": "Version Control (Git)", "introduction": "Git is an essential version control system that tracks changes in your code. It allows you to collaborate with others, revert to previous versions, and manage different features in parallel using branches.", "courses": [{ "name": "The Odin Project: Git Basics", "url": "https://www.theodinproject.com/lessons/foundations-git-basics" }], "youtube": [{ "name": "Git and GitHub for Beginners", "url": "https://www.youtube.com/watch?v=RGOj5yH7evk" }], "quiz": [{ "question": "Which command is used to initialize a git repository?", "options": ["git start", "git init", "git new"], "answer": 1 }] },
@@ -100,6 +200,9 @@
         "youtube": [{ "name": "TypeScript - The Basics", "url": "https://www.youtube.com/watch?v=ahCwqrYpIuM" }], 
         "quiz": [{ "question": "TypeScript is a superset of which language?", "options": ["Java", "Python", "JavaScript"], "answer": 2 }, { "question": "Which file extension is used for TypeScript?", "options": [".js", ".ts", ".txt"], "answer": 1 }],
         "practice": [
+          { "level": "Beginner", "title": "Typed Variable", "description": "Create a variable 'message' of type string and assign it a value.", "starterCode": "// Write your code here", "hint": "Use 'let message: string = ...'", "solution": "let message: string = 'Hello TypeScript';" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Typed Variable", "description": "Create a variable 'message' of type string and assign it a value.", "starterCode": "// Write your code here", "hint": "Use 'let message: string = ...'", "solution": "let message: string = 'Hello TypeScript';" },
           { "level": "Intermediate", "title": "Interfaces", "description": "Define an interface 'User' with a name and id, then create an object matching it.", "starterCode": "interface User {\n  // Define properties here\n}\n\nconst user: User = { /* ... */ };\nconsole.log(user);", "hint": "The interface needs 'id: number' and 'name: string'.", "solution": "interface User {\n  id: number;\n  name: string;\n}\n\nconst user: User = { id: 1, name: 'Alice' };\nconsole.log(user);" }
         ]
@@ -133,6 +236,9 @@
           { "question": "What is a stream in Node.js?", "options": ["A database", "A collection of data", "A sequence of data elements made available over time"], "answer": 2 }
         ],
         "practice": [
+          { "level": "Beginner", "title": "Simple Server", "description": "Create a basic HTTP server logic (simulation).", "starterCode": "const http = require('http');\n// Write your code here", "hint": "Use http.createServer().", "solution": "const http = require('http');\nconst server = http.createServer((req, res) => {\n  res.end('Hello Node');\n});\nconsole.log('Server created');" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Simple Server", "description": "Create a basic HTTP server logic (simulation).", "starterCode": "const http = require('http');\n// Write your code here", "hint": "Use http.createServer().", "solution": "const http = require('http');\nconst server = http.createServer((req, res) => {\n  res.end('Hello Node');\n});\nconsole.log('Server created');" },
           { "level": "Intermediate", "title": "File Path", "description": "Use the path module to join two directory names.", "starterCode": "const path = require('path');\n// Write your code here", "hint": "Use path.join('/users', 'admin').", "solution": "const path = require('path');\nconst fullPath = path.join('/users', 'admin');\nconsole.log(fullPath);" }
         ]
@@ -166,6 +272,9 @@
           { "question": "What does MVC stand for?", "options": ["Model View Controller", "Main View Code", "Model Visual Code"], "answer": 0 }
         ],
         "practice": [
+          { "level": "Beginner", "title": "Flask Route", "description": "Define a simple function that could serve as a Flask route.", "starterCode": "def home():\n    # Your code here\n    pass\n\nprint(home())", "hint": "Just return a string like 'Welcome'.", "solution": "def home():\n    return 'Welcome to Flask'\n\nprint(home())" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Flask Route", "description": "Define a simple function that could serve as a Flask route.", "starterCode": "def home():\n    # Your code here\n    pass\n\nprint(home())", "hint": "Just return a string like 'Welcome'.", "solution": "def home():\n    return 'Welcome to Flask'\n\nprint(home())" },
           { "level": "Intermediate", "title": "Dictionary Response", "description": "Create a function that returns a dictionary (JSON-like) response.", "starterCode": "def get_user():\n    # Your code here\n    pass\n\nprint(get_user())", "hint": "Return a dictionary: {'key': 'value'}.", "solution": "def get_user():\n    return {'id': 1, 'username': 'admin'}\n\nprint(get_user())" }
         ]
@@ -197,6 +306,9 @@
           { "question": "What is Laravel?", "options": ["A PHP Framework", "A Database", "A CMS"], "answer": 0 }
         ],
         "practice": [
+          { "level": "Beginner", "title": "Hello PHP", "description": "Output 'Hello PHP' using echo.", "starterCode": "<?php\n// Write your code here\n?>", "hint": "Use the 'echo' statement.", "solution": "<?php\necho 'Hello PHP';\n?>" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Hello PHP", "description": "Output 'Hello PHP' using echo.", "starterCode": "<?php\n// Write your code here\n?>", "hint": "Use the 'echo' statement.", "solution": "<?php\necho 'Hello PHP';\n?>" },
           { "level": "Intermediate", "title": "Arrays", "description": "Create an array of colors and print the first one.", "starterCode": "<?php\n$colors = array('Red', 'Green', 'Blue');\n// Write your code here\n?>", "hint": "Access the first element with index 0: $colors[0].", "solution": "<?php\n$colors = array('Red', 'Green', 'Blue');\necho $colors[0];\n?>" }
         ]
@@ -323,6 +435,9 @@
           { "question": "What does 'pip' do?", "options": ["Installs packages", "Runs code", "Debugs code"], "answer": 0 }
         ],
         "practice": [
+          { "level": "Beginner", "title": "Hello Python", "description": "Print 'Hello Python' to the console.", "starterCode": "# Write your code here", "solution": "print('Hello Python')" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Hello Python", "description": "Print 'Hello Python' to the console.", "starterCode": "# Write your code here", "solution": "print('Hello Python')" },
           { "level": "Intermediate", "title": "Lists", "description": "Create a list of numbers from 1 to 5 and print the sum.", "starterCode": "numbers = [1, 2, 3, 4, 5]\n# Calculate sum\n# Write your code here", "solution": "numbers = [1, 2, 3, 4, 5]\nprint(sum(numbers))" },
           { "level": "Advanced", "title": "Functions", "description": "Define a function that takes a number and returns its square.", "starterCode": "def square(num):\n    # Write your code here\n    pass\n\nprint(square(5))", "solution": "def square(num):\n    return num * num\n\nprint(square(5))" }
@@ -357,6 +472,9 @@
         ]
         ,
         "practice": [
+          { "level": "Beginner", "title": "Hello Java", "description": "Write a standard main class that prints 'Hello Java'.", "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // Write your code here\n    }\n}", "hint": "Use System.out.println(\"Hello Java\");", "solution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello Java\");\n    }\n}" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Hello Java", "description": "Write a standard main class that prints 'Hello Java'.", "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // Write your code here\n    }\n}", "hint": "Use System.out.println(\"Hello Java\");", "solution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello Java\");\n    }\n}" },
           { "level": "Intermediate", "title": "Loops", "description": "Write a loop that prints numbers 0 to 4.", "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // Write your loop here\n    }\n}", "hint": "Use a for loop: for(int i=0; i<5; i++).", "solution": "public class Main {\n    public static void main(String[] args) {\n        for(int i=0; i<5; i++) {\n            System.out.println(i);\n        }\n    }\n}" }
         ]
@@ -389,6 +507,9 @@
           { "question": "C++ supports:", "options": ["Only OOP", "Only Procedural", "Both OOP and Procedural"], "answer": 2 }
         ],
         "practice": [
+          { "level": "Beginner", "title": "Hello C++", "description": "Write a program that outputs 'Hello C++'.", "starterCode": "#include <iostream>\n\nint main() {\n    // Write your code here\n    return 0;\n}", "hint": "Use std::cout << \"Hello C++\";", "solution": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello C++\";\n    return 0;\n}" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Hello C++", "description": "Write a program that outputs 'Hello C++'.", "starterCode": "#include <iostream>\n\nint main() {\n    // Write your code here\n    return 0;\n}", "hint": "Use std::cout << \"Hello C++\";", "solution": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello C++\";\n    return 0;\n}" },
           { "level": "Intermediate", "title": "Sum", "description": "Calculate the sum of 10 and 20.", "starterCode": "#include <iostream>\n\nint main() {\n    int a = 10;\n    int b = 20;\n    // Write your code here\n    return 0;\n}", "hint": "Output the sum: std::cout << (a + b);", "solution": "#include <iostream>\n\nint main() {\n    int a = 10;\n    int b = 20;\n    std::cout << (a + b);\n    return 0;\n}" }
         ]
@@ -618,6 +739,9 @@
         ],
         "practice": [
           { "level": "Beginner", "title": "Select All", "description": "Write a query to select all columns from a table named 'users'.", "starterCode": "-- Write your query here", "hint": "Use SELECT * FROM table_name.", "solution": "SELECT * FROM users;" }
+        ],
+        "practice_data": [
+          { "level": "Beginner", "title": "Select All", "description": "Write a query to select all columns from a table named 'users'.", "starterCode": "-- Write your query here", "hint": "Use SELECT * FROM table_name.", "solution": "SELECT * FROM users;" }
         ]
       },
       {
@@ -748,6 +872,9 @@
           { "question": "Which library is used for numerical computing?", "options": ["NumPy", "Django", "Requests"], "answer": 0 }
         ],
         "practice": [
+          { "level": "Beginner", "title": "Import Pandas", "description": "Import pandas as pd and print the version (simulated).", "starterCode": "# Write your code here", "hint": "Use 'import pandas as pd'.", "solution": "import pandas as pd\nprint('Pandas imported')" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Import Pandas", "description": "Import pandas as pd and print the version (simulated).", "starterCode": "# Write your code here", "hint": "Use 'import pandas as pd'.", "solution": "import pandas as pd\nprint('Pandas imported')" }
         ]
       },
@@ -907,6 +1034,9 @@
           { "question": "Which library is used for deep learning?", "options": ["TensorFlow", "jQuery", "Bootstrap"], "answer": 0 }
         ],
         "practice": [
+          { "level": "Beginner", "title": "Import Scikit-Learn", "description": "Import the linear_model module from sklearn.", "starterCode": "# Write your code here", "hint": "Use 'from sklearn import linear_model'.", "solution": "from sklearn import linear_model\nprint('Import successful')" }
+        ],
+        "practice_data": [
           { "level": "Beginner", "title": "Import Scikit-Learn", "description": "Import the linear_model module from sklearn.", "starterCode": "# Write your code here", "hint": "Use 'from sklearn import linear_model'.", "solution": "from sklearn import linear_model\nprint('Import successful')" }
         ]
       },

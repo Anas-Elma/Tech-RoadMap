@@ -18,6 +18,7 @@
             <li><a href="#domains" data-i18n="nav_domains">To Learn</a></li>
             <li><a href="#Aboutme" data-i18n="nav_about">About me</a></li>
             <li><a href="#Contactme" data-i18n="nav_contact">Contact me</a></li>
+            <li><a href="#Leaderboard" data-i18n="nav_leaderboard">Leaderboard</a></li>
             <li id="auth-section">
                 <a href="#" class="login-btn" data-i18n="login">Login</a>
             </li>
@@ -117,6 +118,27 @@
             </a>
         </div>
     </section>
+
+    <section id="Leaderboard" class="leaderboard-section" style="padding: 100px 10% 20px; background: #1f242d; color: #fff;">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px;">
+            <span data-i18n="leaderboard_title">Top Learners</span> 🏆
+        </h2>
+        <div class="leaderboard-container" style="max-width: 600px; margin: 0 auto; background: #323946; border-radius: 10px; padding: 20px; border: 2px solid #0ef;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #fff;">
+                        <th style="padding: 10px; text-align: left;">#</th>
+                        <th style="padding: 10px; text-align: left;" data-i18n="label_username">Username</th>
+                        <th style="padding: 10px; text-align: right;" data-i18n="label_score">Levels Solved</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <tr><td colspan="3" style="padding: 20px; text-align: center;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <section class="about-contact">
         <div id="Aboutme" class="about-me">
             <h2 data-i18n="about_title">About Me</h2>

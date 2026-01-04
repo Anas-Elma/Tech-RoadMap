@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const firstLetter = user.username.charAt(0).toUpperCase();
             authSection.innerHTML = `
                 <div id="profile-circle" class="profile-circle">${firstLetter}</div>
-                <a href="#" id="logout-btn" style="margin-left: 12px; color: inherit; text-decoration: none; font-size: 1rem;">Logout</a>
+                <a href="#" id="logout-btn" style="margin-left: 12px; color: #fff; text-decoration: none; font-size: 1rem;">Logout</a>
             `;
             document.getElementById('logout-btn').addEventListener('click', (e) => {
                 e.preventDefault();
@@ -233,6 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // load saved or default language
     const savedLang = localStorage.getItem('site_lang') || 'en';
     loadLanguage(savedLang);
+
+    // Load Leaderboard
+    loadLeaderboard();
 });
 // ... (keep all the code inside DOMContentLoaded) ...
 
@@ -268,21 +271,73 @@ function loadToolDetails(domainId, toolId) {
                 document.getElementById('tool-title').textContent = tool.name;
                 document.getElementById('tool-introduction').textContent = tool.introduction;
 
+                // --- Progress Tracking Logic ---
+                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+                const username = user ? user.username : 'guest';
+                const storageKey = `progress_${username}`;
+                let savedProgress = JSON.parse(localStorage.getItem(storageKey)) || {};
+                const getProgressKey = (type, idx) => `${domainId}_${toolId}_${type}_${idx}`;
+
+                // Progress Bar UI
+                let progressContainer = document.getElementById('course-progress-container');
+                if (!progressContainer) {
+                    progressContainer = document.createElement('div');
+                    progressContainer.id = 'course-progress-container';
+                    progressContainer.style.cssText = 'margin-bottom: 20px; background: #2d2d2d; border-radius: 8px; padding: 15px; border: 1px solid #444;';
+                    progressContainer.innerHTML = `
+                        <div style="display:flex; justify-content:space-between; margin-bottom:8px; color:#fff; font-weight:bold;">
+                            <span>Course Progress</span>
+                            <span id="progress-percentage">0%</span>
+                        </div>
+                        <div style="width:100%; height:8px; background:#444; border-radius:4px; overflow:hidden;">
+                            <div id="progress-fill" style="width:0%; height:100%; background:#4caf50; transition:width 0.3s ease;"></div>
+                        </div>
+                    `;
+                    const intro = document.getElementById('tool-introduction');
+                    intro.parentNode.insertBefore(progressContainer, intro.nextSibling);
+                }
+
+                const updateProgressBar = () => {
+                    const totalItems = tool.courses.length + tool.youtube.length;
+                    if (totalItems === 0) return;
+                    let completed = 0;
+                    tool.courses.forEach((_, i) => { if (savedProgress[getProgressKey('course', i)]) completed++; });
+                    tool.youtube.forEach((_, i) => { if (savedProgress[getProgressKey('video', i)]) completed++; });
+                    const percent = Math.round((completed / totalItems) * 100);
+                    document.getElementById('progress-percentage').textContent = `${percent}%`;
+                    document.getElementById('progress-fill').style.width = `${percent}%`;
+                };
+
                 const coursesList = document.getElementById('courses-list');
                 coursesList.innerHTML = '';
-                tool.courses.forEach(course => {
+                tool.courses.forEach((course, index) => {
                     const li = document.createElement('li');
+                    li.style.cssText = 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;';
+                    
                     const a = document.createElement('a');
                     a.href = course.url;
                     a.textContent = course.name;
                     a.target = '_blank';
+                    
+                    const check = document.createElement('input');
+                    check.type = 'checkbox';
+                    check.style.cursor = 'pointer';
+                    check.checked = !!savedProgress[getProgressKey('course', index)];
+                    check.addEventListener('change', () => {
+                        if (check.checked) savedProgress[getProgressKey('course', index)] = true;
+                        else delete savedProgress[getProgressKey('course', index)];
+                        localStorage.setItem(storageKey, JSON.stringify(savedProgress));
+                        updateProgressBar();
+                    });
+
                     li.appendChild(a);
+                    li.appendChild(check);
                     coursesList.appendChild(li);
                 });
 
                 const youtubeContainer = document.getElementById('youtube-embed-container');
                 youtubeContainer.innerHTML = '';
-                tool.youtube.forEach(video => {
+                tool.youtube.forEach((video, index) => {
                     let videoId = null;
                     try {
                         const url = new URL(video.url);
@@ -299,8 +354,26 @@ function loadToolDetails(domainId, toolId) {
                         const videoWrapper = document.createElement('div');
                         videoWrapper.className = 'video-wrapper';
 
+                        const header = document.createElement('div');
+                        header.style.cssText = 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;';
+
                         const videoTitle = document.createElement('h3');
                         videoTitle.textContent = video.name;
+                        videoTitle.style.margin = '0';
+
+                        const check = document.createElement('input');
+                        check.type = 'checkbox';
+                        check.style.cssText = 'transform: scale(1.5); cursor: pointer;';
+                        check.checked = !!savedProgress[getProgressKey('video', index)];
+                        check.addEventListener('change', () => {
+                            if (check.checked) savedProgress[getProgressKey('video', index)] = true;
+                            else delete savedProgress[getProgressKey('video', index)];
+                            localStorage.setItem(storageKey, JSON.stringify(savedProgress));
+                            updateProgressBar();
+                        });
+
+                        header.appendChild(videoTitle);
+                        header.appendChild(check);
 
                         const iframe = document.createElement('iframe');
                         iframe.src = `https://www.youtube.com/embed/${videoId}`;
@@ -309,11 +382,13 @@ function loadToolDetails(domainId, toolId) {
                         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
                         iframe.allowFullscreen = true;
 
-                        videoWrapper.appendChild(videoTitle);
+                        videoWrapper.appendChild(header);
                         videoWrapper.appendChild(iframe);
                         youtubeContainer.appendChild(videoWrapper);
                     }
                 });
+
+                updateProgressBar(); // Initialize progress bar
 
                 // Populate Practice / Compiler Section
                 setupPracticeSection(tool);
@@ -458,7 +533,9 @@ function loadToolDetails(domainId, toolId) {
         });
 }
 
-function setupPracticeSection(tool) {
+const guestLevelProgress = {};
+
+async function setupPracticeSection(tool) {
     // 1. Find or Create the Practice Tab Button
     let practiceTabBtn = document.querySelector('.tab-btn[data-tab="practice-section"]');
     const tabContainer = document.querySelector('.tab-btn').parentElement;
@@ -496,94 +573,191 @@ function setupPracticeSection(tool) {
     if (practiceContent) {
         practiceContent.innerHTML = ''; // Clear previous
 
-        if (tool.practice && tool.practice.length > 0) {
-            if (practiceTabBtn) practiceTabBtn.style.display = 'inline-block';
+        // Try to load from API first (Dynamic Progression)
+        const token = localStorage.getItem('jwt_token');
+        let apiLevelData = null;
 
-            // Level Selector
-            const levelContainer = document.createElement('div');
-            levelContainer.className = 'level-selector';
-            levelContainer.style.marginBottom = '15px';
-
-            const editorContainer = document.createElement('div');
-            editorContainer.className = 'editor-container';
-            
-            // Render Levels
-            tool.practice.forEach((exercise, index) => {
-                const btn = document.createElement('button');
-                btn.textContent = `${exercise.level}: ${exercise.title}`;
-                btn.className = 'level-btn';
-                btn.style.marginRight = '10px';
-                btn.style.marginBottom = '10px';
-                
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('#practice-section .level-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    renderEditor(exercise, tool.id);
+        if (token) {
+            try {
+                // Add timestamp to prevent caching
+                const res = await fetch(`api_practice.php?tool_id=${tool.id}&_=${new Date().getTime()}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
                 });
-                
-                levelContainer.appendChild(btn);
-                // Activate first level by default
-                if (index === 0) btn.click();
-            });
-
-            practiceContent.appendChild(levelContainer);
-            practiceContent.appendChild(editorContainer);
-
-            function renderEditor(exercise, toolId) {
-                editorContainer.innerHTML = `
-                    <h3 style="color: #fff; margin-bottom: 10px;">${exercise.title}</h3>
-                    <p style="color: #ccc; margin-bottom: 15px;">${exercise.description}</p>
-                    <textarea id="code-editor" style="width: 100%; height: 200px; background: #1e1e1e; color: #d4d4d4; border: 1px solid #333; padding: 10px; font-family: monospace; border-radius: 5px;">${exercise.starterCode}</textarea>
-                    <div style="margin-top: 10px;">
-                        <button id="run-code-btn" type="button" class="btn-primary">Run Code <i class='bx bx-play'></i></button>
-                        ${exercise.hint ? `<button id="hint-btn" type="button" class="btn-secondary" style="margin-left: 10px; background-color: #444;">Show Hint <i class='bx bx-bulb'></i></button>` : ''}
-                        ${exercise.solution ? `<button id="solution-btn" type="button" class="btn-secondary" style="margin-left: 10px; background-color: #e74c3c;">Show Solution <i class='bx bx-check-circle'></i></button>` : ''}
-                    </div>
-                    ${exercise.hint ? `<div id="hint-box" style="display: none; margin-top: 15px; padding: 10px; background: #2d2d2d; border-left: 4px solid #f39c12; color: #ddd; font-style: italic;"><strong>Hint:</strong> ${exercise.hint}</div>` : ''}
-                    ${exercise.solution ? `<div id="solution-box" style="display: none; margin-top: 15px; padding: 10px; background: #2d2d2d; border-left: 4px solid #e74c3c; color: #ddd; font-family: monospace; white-space: pre-wrap;"><strong>Solution:</strong>\n${exercise.solution}</div>` : ''}
-                    <div id="code-output" style="margin-top: 15px; background: #000; color: #0f0; padding: 10px; border-radius: 5px; min-height: 50px; white-space: pre-wrap; font-family: monospace;"></div>
-                `;
-
-                const runBtn = editorContainer.querySelector('#run-code-btn');
-                const codeEditor = editorContainer.querySelector('#code-editor');
-                const outputDiv = editorContainer.querySelector('#code-output');
-
-                if (runBtn) {
-                    runBtn.addEventListener('click', () => {
-                        runCompiler(toolId, codeEditor.value, outputDiv);
-                    });
-                }
-
-                if (exercise.hint) {
-                    const hintBtn = editorContainer.querySelector('#hint-btn');
-                    const hintBox = editorContainer.querySelector('#hint-box');
-                    if (hintBtn && hintBox) {
-                        hintBtn.addEventListener('click', () => {
-                            const isHidden = hintBox.style.display === 'none';
-                            hintBox.style.display = isHidden ? 'block' : 'none';
-                            hintBtn.innerHTML = isHidden ? `Hide Hint <i class='bx bx-bulb'></i>` : `Show Hint <i class='bx bx-bulb'></i>`;
-                        });
+                const data = await res.json();
+                if (data.success) {
+                    if (data.completed_all) {
+                        practiceContent.innerHTML = '<div style="padding: 20px; color: #fff;"><h3>🎉 You have completed all levels for this tool!</h3></div>';
+                        if (practiceTabBtn) practiceTabBtn.style.display = 'inline-block';
+                        return;
                     }
+                    apiLevelData = data;
                 }
-
-                if (exercise.solution) {
-                    const solBtn = editorContainer.querySelector('#solution-btn');
-                    const solBox = editorContainer.querySelector('#solution-box');
-                    if (solBtn && solBox) {
-                        solBtn.addEventListener('click', () => {
-                            const isHidden = solBox.style.display === 'none';
-                            solBox.style.display = isHidden ? 'block' : 'none';
-                            solBtn.innerHTML = isHidden ? `Hide Solution <i class='bx bx-check-circle'></i>` : `Show Solution <i class='bx bx-check-circle'></i>`;
-                        });
-                    }
-                }
+            } catch (e) {
+                console.error("API Load error", e);
             }
+        }
 
-        } else {
+        if (apiLevelData) {
             if (practiceTabBtn) practiceTabBtn.style.display = 'inline-block';
-            practiceContent.innerHTML = '<div style="padding: 20px; color: #fff;"><h3>Practice Area</h3><p>No practice exercises available for this tool yet. Check back later!</p></div>';
+            renderPracticeLevel(apiLevelData.level, apiLevelData.current_level_number, tool, practiceContent);
+        } else {
+            // Guest Mode: Use practice_data (all levels) or fallback to practice
+            const exercises = tool.practice_data || tool.practice || [];
+            
+            if (exercises.length > 0) {
+                if (practiceTabBtn) practiceTabBtn.style.display = 'inline-block';
+
+                // Initialize guest progress if needed
+                if (!guestLevelProgress[tool.id]) {
+                    guestLevelProgress[tool.id] = 1;
+                }
+                
+                const currentLevelNum = guestLevelProgress[tool.id];
+                const index = currentLevelNum - 1;
+
+                if (index < exercises.length) {
+                    renderPracticeLevel(exercises[index], currentLevelNum, tool, practiceContent, true);
+                } else {
+                    practiceContent.innerHTML = '<div style="padding: 20px; color: #fff;"><h3>🎉 You have completed all available levels!</h3><p>Register to save your progress permanently.</p></div>';
+                }
+            } else {
+                if (practiceTabBtn) practiceTabBtn.style.display = 'inline-block';
+                practiceContent.innerHTML = '<div style="padding: 20px; color: #fff;"><h3>Practice Area</h3><p>No practice exercises available for this tool yet. Check back later!</p></div>';
+            }
         }
     }
+}
+
+async function loadLeaderboard() {
+    const tbody = document.getElementById('leaderboard-body');
+    if (!tbody) return;
+
+    try {
+        const response = await fetch('api_leaderboard.php');
+        const data = await response.json();
+
+        if (data.success && data.leaderboard.length > 0) {
+            tbody.innerHTML = '';
+            data.leaderboard.forEach((user, index) => {
+                const tr = document.createElement('tr');
+                tr.style.borderBottom = '1px solid #444';
+                // Highlight top 3
+                const rankColor = index === 0 ? '#FFD700' : (index === 1 ? '#C0C0C0' : (index === 2 ? '#CD7F32' : '#fff'));
+                
+                tr.innerHTML = `
+                    <td style="padding: 12px; color: ${rankColor}; font-weight: bold;">${index + 1}</td>
+                    <td style="padding: 12px;">${user.username}</td>
+                    <td style="padding: 12px; text-align: right; color: #0ef;">${user.score}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        } else {
+            tbody.innerHTML = '<tr><td colspan="3" style="padding: 20px; text-align: center;">No records yet. Be the first!</td></tr>';
+        }
+    } catch (error) {
+        console.error('Error loading leaderboard:', error);
+        tbody.innerHTML = '<tr><td colspan="3" style="padding: 20px; text-align: center; color: #ff4d4d;">Failed to load leaderboard.</td></tr>';
+    }
+}
+
+function renderPracticeLevel(exercise, levelNum, tool, container, isStatic = false) {
+    container.innerHTML = '';
+    const editorContainer = document.createElement('div');
+    editorContainer.className = 'editor-container';
+    
+    editorContainer.innerHTML = `
+        <div style="margin-bottom: 15px;">
+            <span style="background: #4caf50; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">Level ${levelNum}</span>
+        </div>
+        <h3 style="color: #fff; margin-bottom: 10px;">${exercise.title}</h3>
+        <p style="color: #ccc; margin-bottom: 15px;">${exercise.description}</p>
+        <textarea id="code-editor" style="width: 100%; height: 200px; background: #1e1e1e; color: #d4d4d4; border: 1px solid #333; padding: 10px; font-family: monospace; border-radius: 5px;">${exercise.starter_code || exercise.starterCode || ''}</textarea>
+        <div style="margin-top: 10px;">
+            <button id="run-code-btn" type="button" class="btn-primary">Run Code <i class='bx bx-play'></i></button>
+            <button id="next-level-btn" type="button" class="btn-primary" style="margin-left: 10px; background-color: #27ae60; display: none;">Next Level <i class='bx bx-right-arrow-alt'></i></button>
+            ${exercise.hint ? `<button id="hint-btn" type="button" class="btn-secondary" style="margin-left: 10px; background-color: #444;">Show Hint <i class='bx bx-bulb'></i></button>` : ''}
+            ${exercise.solution ? `<button id="solution-btn" type="button" class="btn-secondary" style="margin-left: 10px; background-color: #e74c3c;">Show Solution <i class='bx bx-check-circle'></i></button>` : ''}
+        </div>
+        ${exercise.hint ? `<div id="hint-box" style="display: none; margin-top: 15px; padding: 10px; background: #2d2d2d; border-left: 4px solid #f39c12; color: #ddd; font-style: italic;"><strong>Hint:</strong> ${exercise.hint}</div>` : ''}
+        ${exercise.solution ? `<div id="solution-box" style="display: none; margin-top: 15px; padding: 10px; background: #2d2d2d; border-left: 4px solid #e74c3c; color: #ddd; font-family: monospace; white-space: pre-wrap;"><strong>Solution:</strong>\n${exercise.solution}</div>` : ''}
+        <div id="code-output" style="margin-top: 15px; background: #000; color: #0f0; padding: 10px; border-radius: 5px; min-height: 50px; white-space: pre-wrap; font-family: monospace;"></div>
+    `;
+    
+    container.appendChild(editorContainer);
+
+    const codeEditor = editorContainer.querySelector('#code-editor');
+    const outputDiv = editorContainer.querySelector('#code-output');
+    const runBtn = editorContainer.querySelector('#run-code-btn');
+    const nextBtn = editorContainer.querySelector('#next-level-btn');
+    const hintBtn = editorContainer.querySelector('#hint-btn');
+    const hintBox = editorContainer.querySelector('#hint-box');
+    const solutionBtn = editorContainer.querySelector('#solution-btn');
+    const solutionBox = editorContainer.querySelector('#solution-box');
+
+    runBtn.addEventListener('click', async () => {
+        await runCompiler(tool.id, codeEditor.value, outputDiv);
+        
+        // Auto-check answer on run
+        const userCode = codeEditor.value.trim();
+        const solution = (exercise.solution || '').trim();
+        const normalize = s => s.replace(/\s+/g, ' ').trim();
+        
+        if (normalize(userCode) === normalize(solution)) {
+            const successMsg = document.createElement('div');
+            successMsg.textContent = "\n✅ Correct! Well done.";
+            successMsg.style.color = "#4caf50";
+            successMsg.style.fontWeight = "bold";
+            outputDiv.appendChild(successMsg);
+            
+            if (!isStatic) {
+                const token = localStorage.getItem('jwt_token');
+                if (token) {
+                    try {
+                        const res = await fetch('api_practice.php', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+                            body: JSON.stringify({ tool_id: tool.id, level_number: levelNum })
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            nextBtn.style.display = 'inline-block';
+                        }
+                    } catch(e) { console.error(e); }
+                }
+            } else {
+                // If static (not logged in), just show next button
+                nextBtn.style.display = 'inline-block';
+            }
+        }
+    });
+
+    if (hintBtn) {
+        hintBtn.addEventListener('click', () => {
+            const isHidden = hintBox.style.display === 'none';
+            hintBox.style.display = isHidden ? 'block' : 'none';
+        });
+    }
+
+    if (solutionBtn) {
+        solutionBtn.addEventListener('click', () => {
+            const isHidden = solutionBox.style.display === 'none';
+            solutionBox.style.display = isHidden ? 'block' : 'none';
+            solutionBtn.innerHTML = isHidden ? `Hide Solution <i class='bx bx-check-circle'></i>` : `Show Solution <i class='bx bx-check-circle'></i>`;
+            // Allow proceeding if solution is viewed
+            nextBtn.style.display = 'inline-block';
+        });
+    }
+
+    // Handle Next Level click
+    nextBtn.addEventListener('click', () => {
+        if (isStatic) {
+            if (!guestLevelProgress[tool.id]) guestLevelProgress[tool.id] = 1;
+            guestLevelProgress[tool.id]++;
+            setupPracticeSection(tool);
+        } else {
+            setupPracticeSection(tool);
+        }
+    });
 }
 
 async function runCompiler(toolId, code, outputDiv) {

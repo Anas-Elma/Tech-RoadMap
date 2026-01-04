@@ -6,6 +6,7 @@
   "nav_domains": "To Learn",
   "nav_about": "About me",
   "nav_contact": "Contact me",
+  "nav_leaderboard": "Leaderboard",
   "login": "Login",
   "welcome": "Find Your Path.",
   "master": "Master Your Future.",
@@ -71,5 +72,13 @@
   "frontend_p3_t2": "Testing",
   "frontend_p3_d2": "Ensure your code quality with tools like Jest or Vitest.",
   "frontend_p3_t3": "TypeScript",
-  "frontend_p3_d3": "Add static types to JavaScript to catch errors early."
+  "frontend_p3_d3": "Add static types to JavaScript to catch errors early.",
+  "projects_title": "Real-world Projects",
+  "difficulty_level": "Difficulty Level",
+  "progress_bar_label": "Your Progress",
+  "level_locked": "Locked",
+  "level_completed": "Completed",
+  "next_level_btn": "Next Level",
+  "leaderboard_title": "Top Learners",
+  "label_score": "Levels Solved"
 }

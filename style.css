@@ -9,6 +9,11 @@
 
 }
 
+body {
+  background: #1f242d;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -20,7 +25,7 @@ a {
   top: 0;
   width: 100%;
   padding: 25px 4%;
-  background: rgba(10, 10, 10, 0.95);
+  background: #1f242d;
   display: flex;
   justify-content: space-between;
   align-items: center;
